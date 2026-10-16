@@ -6,9 +6,20 @@ export default function BackToTop() {
 
   useEffect(() => {
     function handleScroll() {
-      setVisible(window.scrollY > 400)
+      const scrollY = window.scrollY
+      const windowHeight = window.innerHeight
+      const documentHeight = document.documentElement.scrollHeight
+
+      // Show after scrolling 400px, but hide when approaching footer (last 350px)
+      // to avoid obscuring bottom content, event cards, or interactive footer links
+      const isPastThreshold = scrollY > 400
+      const isNearBottom = windowHeight + scrollY >= documentHeight - 350
+
+      setVisible(isPastThreshold && !isNearBottom)
     }
+
     window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -22,10 +33,10 @@ export default function BackToTop() {
     <button
       type="button"
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-navy text-white shadow-lg transition-all hover:bg-navy-light focus-visible:ring-2 focus-visible:ring-terracotta focus-visible:ring-offset-2"
+      className="fixed bottom-4 right-3 sm:bottom-6 sm:right-6 z-30 flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-navy/90 text-white shadow-lg backdrop-blur-xs transition-all hover:bg-navy hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta border border-white/20 print:hidden"
       aria-label="Back to top"
     >
-      <ArrowUp className="h-5 w-5" aria-hidden="true" />
+      <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5" aria-hidden="true" />
     </button>
   )
 }

@@ -189,10 +189,10 @@ export default function ImpactPage() {
         />
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative pl-10 sm:pl-14 space-y-8 sm:space-y-10">
+          <div className="relative space-y-8 sm:space-y-10">
             {/* Continuous vertical timeline line */}
             <div
-              className="absolute top-6 bottom-6 left-4 sm:left-5 w-0.5 bg-border/80 -translate-x-1/2"
+              className="absolute top-6 bottom-6 left-4 sm:left-6 w-0.5 bg-border/80 -translate-x-1/2"
               aria-hidden="true"
             />
             {HEALTHCARE_EVENTS.map((event, index) => {
@@ -203,10 +203,10 @@ export default function ImpactPage() {
               ][index]
 
               return (
-                <div key={index} className="relative group">
+                <div key={index} className="relative pl-12 sm:pl-16 group">
                   {/* Timeline node */}
                   <div
-                    className="absolute left-4 sm:left-5 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-terracotta text-white shadow-xs ring-4 ring-white"
+                    className="absolute left-4 sm:left-6 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-terracotta text-white shadow-xs ring-4 ring-white z-10"
                     aria-hidden="true"
                   >
                     <Calendar className="h-4 w-4" />
@@ -214,14 +214,14 @@ export default function ImpactPage() {
 
                   {/* Event Card */}
                   <div className="rounded-2xl border border-border bg-cream/30 p-5 sm:p-7 transition-all hover:bg-cream/50 hover:shadow-xs">
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                    <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2.5 mb-3.5">
                       <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                         {eventMeta?.category || 'Healthcare Outreach'}
                       </span>
                       {eventMeta?.date && (
                         <span className="inline-flex items-center gap-1.5 rounded-md bg-white/90 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
                           <Calendar className="h-3.5 w-3.5 text-terracotta shrink-0" aria-hidden="true" />
-                          <span className="break-words">{eventMeta.date}</span>
+                          <span className="break-words leading-tight">{eventMeta.date}</span>
                         </span>
                       )}
                     </div>
@@ -230,7 +230,7 @@ export default function ImpactPage() {
                       {event.title}
                     </h3>
 
-                    <p className="mt-2 text-sm text-text-primary leading-relaxed mb-5">
+                    <p className="mt-2.5 text-sm text-text-primary leading-relaxed mb-5">
                       {event.description}
                     </p>
 

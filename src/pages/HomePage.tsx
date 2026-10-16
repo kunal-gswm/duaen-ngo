@@ -18,6 +18,7 @@ import {
   ShieldCheck,
   Clock,
   Sparkles,
+  Info,
 } from 'lucide-react'
 import {
   Section,
@@ -1002,31 +1003,31 @@ export default function HomePage() {
 
         <div className="mx-auto max-w-4xl">
           {/* Editorial Timeline Track */}
-          <div className="relative pl-10 sm:pl-14 space-y-8 sm:space-y-10">
+          <div className="relative space-y-8 sm:space-y-10">
             {/* Continuous vertical timeline line */}
             <div
-              className="absolute top-6 bottom-6 left-4 sm:left-5 w-0.5 bg-border/80 -translate-x-1/2"
+              className="absolute top-6 bottom-6 left-4 sm:left-6 w-0.5 bg-border/80 -translate-x-1/2"
               aria-hidden="true"
             />
 
             {/* Event 1: Medical Camp with Yashoda Hospital */}
-            <div className="relative group">
+            <div className="relative pl-12 sm:pl-16 group">
               {/* Timeline Pin */}
               <div
-                className="absolute left-4 sm:left-5 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy text-white ring-4 ring-cream shadow-xs"
+                className="absolute left-4 sm:left-6 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy text-white ring-4 ring-cream shadow-xs z-10"
                 aria-hidden="true"
               >
                 <Stethoscope className="h-4 w-4" />
               </div>
 
               <div className="rounded-2xl border border-border bg-white p-5 sm:p-7 transition-shadow hover:shadow-md">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2.5 mb-3.5">
                   <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                     Institutional Collaboration
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/70 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/80 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
                     <Calendar className="h-3.5 w-3.5 text-terracotta shrink-0" aria-hidden="true" />
-                    <span className="break-words">22 February (Year unrecorded in source records)</span>
+                    <span className="break-words leading-tight">22 February (Year unrecorded in source records)</span>
                   </span>
                 </div>
 
@@ -1055,30 +1056,34 @@ export default function HomePage() {
                   ))}
                 </div>
 
-                <p className="mt-4 text-xs text-text-secondary/80 italic">
-                  Note: {HEALTHCARE_EVENTS[0].dateNote}
-                </p>
+                <div className="mt-4 flex items-start gap-2 rounded-lg border border-border/80 bg-cream/40 p-3 text-xs text-text-secondary">
+                  <Info className="h-4 w-4 shrink-0 text-mustard mt-0.5" aria-hidden="true" />
+                  <div>
+                    <span className="font-semibold text-navy">Record Note: </span>
+                    <span className="italic">{HEALTHCARE_EVENTS[0].dateNote}</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Event 2: First-Aid & CPR Awareness Session */}
-            <div className="relative group">
+            <div className="relative pl-12 sm:pl-16 group">
               {/* Timeline Pin */}
               <div
-                className="absolute left-4 sm:left-5 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-terracotta text-white ring-4 ring-cream shadow-xs"
+                className="absolute left-4 sm:left-6 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-terracotta text-white ring-4 ring-cream shadow-xs z-10"
                 aria-hidden="true"
               >
                 <Heart className="h-4 w-4" />
               </div>
 
               <div className="rounded-2xl border border-border bg-white p-5 sm:p-7 transition-shadow hover:shadow-md">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2.5 mb-3.5">
                   <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                     Life Safety Education
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/70 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/80 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
                     <Clock className="h-3.5 w-3.5 text-terracotta shrink-0" aria-hidden="true" />
-                    <span className="break-words">Specialist-Led Student Workshop</span>
+                    <span className="break-words leading-tight">Specialist-Led Student Workshop</span>
                   </span>
                 </div>
 
@@ -1107,30 +1112,34 @@ export default function HomePage() {
                   ))}
                 </div>
 
-                <p className="mt-4 text-xs text-text-secondary/80 italic">
-                  Note: {HEALTHCARE_EVENTS[1].dateNote}
-                </p>
+                <div className="mt-4 flex items-start gap-2 rounded-lg border border-border/80 bg-cream/40 p-3 text-xs text-text-secondary">
+                  <Info className="h-4 w-4 shrink-0 text-mustard mt-0.5" aria-hidden="true" />
+                  <div>
+                    <span className="font-semibold text-navy">Record Note: </span>
+                    <span className="italic">{HEALTHCARE_EVENTS[1].dateNote}</span>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Event 3: Disaster Management Awareness Session */}
-            <div className="relative group">
+            <div className="relative pl-12 sm:pl-16 group">
               {/* Timeline Pin */}
               <div
-                className="absolute left-4 sm:left-5 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-mustard text-navy ring-4 ring-cream shadow-xs"
+                className="absolute left-4 sm:left-6 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-mustard text-navy ring-4 ring-cream shadow-xs z-10"
                 aria-hidden="true"
               >
                 <ShieldCheck className="h-4 w-4" />
               </div>
 
               <div className="rounded-2xl border border-border bg-white p-5 sm:p-7 transition-shadow hover:shadow-md">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2.5 mb-3.5">
                   <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                     University Volunteer Collaboration
                   </span>
-                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/70 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/80 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
                     <Calendar className="h-3.5 w-3.5 text-terracotta shrink-0" aria-hidden="true" />
-                    <span className="break-words">12 October 2026 (Date subject to confirmation)</span>
+                    <span className="break-words leading-tight">12 October 2026 (Date subject to confirmation)</span>
                   </span>
                 </div>
 
@@ -1159,9 +1168,13 @@ export default function HomePage() {
                   ))}
                 </div>
 
-                <p className="mt-4 text-xs text-text-secondary/80 italic">
-                  Note: {HEALTHCARE_EVENTS[2].dateNote}
-                </p>
+                <div className="mt-4 flex items-start gap-2 rounded-lg border border-border/80 bg-cream/40 p-3 text-xs text-text-secondary">
+                  <Info className="h-4 w-4 shrink-0 text-mustard mt-0.5" aria-hidden="true" />
+                  <div>
+                    <span className="font-semibold text-navy">Record Note: </span>
+                    <span className="italic">{HEALTHCARE_EVENTS[2].dateNote}</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
