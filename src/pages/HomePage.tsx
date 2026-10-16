@@ -67,7 +67,7 @@ export default function HomePage() {
 
       {/* SECTION A: HERO */}
       <section
-        className="relative overflow-hidden bg-navy text-white pt-12 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28"
+        className="relative overflow-hidden bg-navy text-white pt-9 pb-16 sm:pt-12 sm:pb-24 lg:pt-14 lg:pb-28"
         aria-labelledby="hero-heading"
       >
         {/* Subtle decorative background glow */}
