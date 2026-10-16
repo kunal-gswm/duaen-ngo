@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #24324A;
+  --color-navy-light: #2E3F5C;
+  --color-navy-dark: #1A2536;
+  --color-terracotta: #C45D42;
+  --color-terracotta-light: #D4745C;
+  --color-terracotta-dark: #A84E38;
+  --color-cream: #F7F1E8;
+  --color-cream-dark: #EDE5D8;
+  --color-mustard: #E6B85C;
+  --color-mustard-light: #EEC876;
+  --color-dusty-blue: #DCE6ED;
+  --color-dusty-blue-dark: #C5D4E0;
+  --color-text-primary: #252A31;
+  --color-text-secondary: #5F6268;
+  --color-border: #E4DED4;
+
+  --font-heading: 'Manrope', system-ui, -apple-system, sans-serif;
+  --font-body: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 12px 24px;
+  background: var(--color-navy);
+  color: white;
+  border-radius: 0 0 6px 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 3px solid var(--color-terracotta);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Button reset for accessibility */
+button {
+  cursor: pointer;
+}
+
+/* Consistent image handling */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
