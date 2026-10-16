@@ -72,11 +72,11 @@ export default function HomePage() {
       >
         {/* Subtle decorative background glow */}
         <div
-          className="pointer-events-none absolute -top-40 right-0 h-96 w-96 rounded-full bg-terracotta/15 blur-3xl"
+          className="pointer-events-none absolute -top-40 right-0 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-terracotta/15 blur-3xl"
           aria-hidden="true"
         />
         <div
-          className="pointer-events-none absolute -bottom-40 left-0 h-96 w-96 rounded-full bg-dusty-blue/10 blur-3xl"
+          className="pointer-events-none absolute -bottom-40 left-0 h-72 w-72 sm:h-96 sm:w-96 rounded-full bg-dusty-blue/10 blur-3xl"
           aria-hidden="true"
         />
 
@@ -165,8 +165,7 @@ export default function HomePage() {
                       <div className="h-9 w-9 rounded-xl bg-white p-1 shadow-xs flex items-center justify-center shrink-0">
                         <img
                           src="/logo-mark.png"
-                          alt=""
-                          aria-hidden="true"
+                          alt="Duaen Foundation NGO Emblem"
                           className="h-full w-full object-contain"
                           width={36}
                           height={36}
@@ -581,11 +580,11 @@ export default function HomePage() {
           </div>
 
           {/* Card 6: Volunteer Engagement (Wide Banner Bento Card: lg:col-span-12) */}
-          <div className="lg:col-span-12 rounded-2xl bg-navy text-white p-6 sm:p-8 lg:p-10 shadow-lg">
+          <div className="lg:col-span-12 rounded-2xl bg-navy text-white p-5 sm:p-8 lg:p-10 shadow-lg">
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center">
               <div className="lg:col-span-8">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-mustard">
+                <div className="flex items-center flex-wrap gap-2.5 sm:gap-3 mb-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-mustard shrink-0">
                     <HandHeart className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <span className="text-xs font-semibold uppercase tracking-wider text-dusty-blue">
@@ -1657,13 +1656,13 @@ export default function HomePage() {
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta">
                     <Mail className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary block">
                       Email Inquiries
                     </span>
                     <a
                       href={`mailto:${ORG.email}`}
-                      className="font-heading text-base font-semibold text-terracotta hover:underline transition-colors mt-0.5 inline-block"
+                      className="font-heading text-base font-semibold text-terracotta hover:underline transition-colors mt-0.5 inline-block break-all"
                     >
                       {ORG.email}
                     </a>
@@ -1678,7 +1677,7 @@ export default function HomePage() {
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy/10 text-navy">
                     <Globe className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary block">
                       Official Website
                     </span>
@@ -1686,10 +1685,10 @@ export default function HomePage() {
                       href={ORG.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-heading text-base font-semibold text-navy hover:text-terracotta transition-colors inline-flex items-center gap-1.5 mt-0.5"
+                      className="font-heading text-base font-semibold text-navy hover:text-terracotta transition-colors inline-flex items-center gap-1.5 mt-0.5 break-all"
                     >
                       {ORG.website.replace('https://', '')}
-                      <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                      <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                       <span className="sr-only">(opens in a new tab)</span>
                     </a>
                   </div>
@@ -1700,7 +1699,7 @@ export default function HomePage() {
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-mustard/20 text-navy">
                     <InstagramIcon className="h-5 w-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary block">
                       Social Media
                     </span>
@@ -1708,10 +1707,10 @@ export default function HomePage() {
                       href={ORG.instagram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-heading text-base font-semibold text-navy hover:text-terracotta transition-colors inline-flex items-center gap-1.5 mt-0.5"
+                      className="font-heading text-base font-semibold text-navy hover:text-terracotta transition-colors inline-flex items-center gap-1.5 mt-0.5 break-all"
                     >
                       @duaenfoundationngo
-                      <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+                      <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
                       <span className="sr-only">(opens in a new tab)</span>
                     </a>
                   </div>
@@ -1722,7 +1721,7 @@ export default function HomePage() {
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy/10 text-navy">
                     <MapPin className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <div>
+                  <div className="min-w-0 flex-1">
                     <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary block">
                       Primary School Location
                     </span>

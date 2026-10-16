@@ -42,8 +42,7 @@ export default function Header() {
             <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white p-1 shadow-xs transition-transform group-hover:scale-105 sm:h-12 sm:w-12">
               <img
                 src="/logo-mark.png"
-                alt=""
-                aria-hidden="true"
+                alt="Duaen Foundation NGO Emblem"
                 className="h-full w-full object-contain"
                 width={48}
                 height={48}
