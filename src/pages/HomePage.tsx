@@ -374,18 +374,18 @@ export default function HomePage() {
         {/* Varied Grid: Asymmetrical Bento Layout */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-12">
           {/* Card 1: Education & Duaen Primary School (Large Hero Bento Card: lg:col-span-8) */}
-          <div className="lg:col-span-8 flex flex-col justify-between rounded-2xl border border-border bg-gradient-to-br from-cream via-cream/50 to-dusty-blue/20 p-6 sm:p-8 hover:border-terracotta/50 transition-all shadow-xs">
+          <div className="lg:col-span-8 flex flex-col justify-between rounded-2xl border border-border bg-gradient-to-br from-cream via-cream/50 to-dusty-blue/20 p-5 sm:p-8 hover:border-terracotta/50 transition-all shadow-xs">
             <div>
               <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-terracotta text-white shadow-xs">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-terracotta text-white shadow-xs">
                     <GraduationCap className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <div>
                     <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                       Flagship Initiative
                     </span>
-                    <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy mt-1">
+                    <h3 className="font-heading text-lg sm:text-2xl font-bold text-navy mt-0.5">
                       Education &amp; Duaen Primary School
                     </h3>
                   </div>
@@ -419,21 +419,22 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-border/80 flex items-center justify-between">
-              <span className="text-xs font-medium text-text-secondary">
+            <div className="mt-8 pt-4 border-t border-border/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <span className="text-xs font-medium text-text-secondary leading-normal">
                 D-Block, Ghaziabad • Regular weekday classes
               </span>
               <Link
                 to="/programs#education"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta hover:text-terracotta-dark transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta hover:text-terracotta-dark transition-colors whitespace-nowrap self-start sm:self-auto group focus-visible:outline-2 focus-visible:outline-terracotta rounded-xs"
               >
-                Learn more <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                <span>Learn more</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </Link>
             </div>
           </div>
 
           {/* Card 2: Women's Empowerment (Accent Bento Card: lg:col-span-4) */}
-          <div className="lg:col-span-4 flex flex-col justify-between rounded-2xl border border-border bg-white p-6 sm:p-8 hover:border-terracotta/50 transition-all shadow-xs">
+          <div className="lg:col-span-4 flex flex-col justify-between rounded-2xl border border-border bg-white p-5 sm:p-8 hover:border-terracotta/50 transition-all shadow-xs">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-terracotta/10 text-terracotta mb-4">
                 <Heart className="h-6 w-6" aria-hidden="true" />
@@ -464,15 +465,16 @@ export default function HomePage() {
             <div className="mt-6 pt-4 border-t border-border">
               <Link
                 to="/programs#women-empowerment"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta hover:text-terracotta-dark transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-terracotta hover:text-terracotta-dark transition-colors whitespace-nowrap group focus-visible:outline-2 focus-visible:outline-terracotta rounded-xs"
               >
-                Explore program <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                <span>Explore program</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </Link>
             </div>
           </div>
 
           {/* Card 3: Healthcare & First-Aid Awareness (lg:col-span-4) */}
-          <div className="lg:col-span-4 flex flex-col justify-between rounded-2xl border border-border bg-white p-6 sm:p-8 hover:border-navy/40 transition-all shadow-xs">
+          <div className="lg:col-span-4 flex flex-col justify-between rounded-2xl border border-border bg-white p-5 sm:p-8 hover:border-navy/40 transition-all shadow-xs">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-dusty-blue text-navy mb-4">
                 <Stethoscope className="h-6 w-6" aria-hidden="true" />
@@ -493,9 +495,10 @@ export default function HomePage() {
             <div className="mt-6 pt-4 border-t border-border">
               <Link
                 to="/programs#healthcare"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-terracotta transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-terracotta transition-colors whitespace-nowrap group focus-visible:outline-2 focus-visible:outline-navy rounded-xs"
               >
-                View health camps <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                <span>View health camps</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -510,7 +513,7 @@ export default function HomePage() {
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
-            <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
+            <div className="p-5 sm:p-7 flex flex-col justify-between flex-1">
               <div>
                 <span className="text-xs font-bold uppercase tracking-wider text-navy-light">
                   Direct Relief
@@ -524,12 +527,13 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-border flex items-center justify-between">
+              <div className="mt-6 pt-4 border-t border-border flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
                 <Link
                   to="/programs#community-welfare"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-terracotta transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-terracotta transition-colors whitespace-nowrap group focus-visible:outline-2 focus-visible:outline-navy rounded-xs"
                 >
-                  Learn about relief <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  <span>Learn about relief</span>
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                 </Link>
                 <span className="text-xs text-text-secondary/70">Nov 2025 Drive</span>
               </div>
@@ -537,7 +541,7 @@ export default function HomePage() {
           </div>
 
           {/* Card 5: Computer Learning (lg:col-span-4) */}
-          <div className="lg:col-span-4 flex flex-col justify-between rounded-2xl border border-border bg-white p-6 sm:p-8 hover:border-navy/40 transition-all shadow-xs">
+          <div className="lg:col-span-4 flex flex-col justify-between rounded-2xl border border-border bg-white p-5 sm:p-8 hover:border-navy/40 transition-all shadow-xs">
             <div>
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-mustard/20 text-navy mb-4">
                 <Monitor className="h-6 w-6" aria-hidden="true" />
@@ -558,9 +562,10 @@ export default function HomePage() {
             <div className="mt-6 pt-4 border-t border-border">
               <Link
                 to="/programs#computer-learning"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-terracotta transition-colors"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-terracotta transition-colors whitespace-nowrap group focus-visible:outline-2 focus-visible:outline-navy rounded-xs"
               >
-                Digital initiatives <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                <span>Digital initiatives</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -675,27 +680,31 @@ export default function HomePage() {
           {/* Right Column: Visual School Showcase Card */}
           <div className="lg:col-span-5">
             <div
-              className="rounded-2xl border border-navy/15 bg-gradient-to-br from-white via-cream to-dusty-blue/40 p-6 sm:p-8 shadow-md"
+              className="rounded-2xl border border-navy/15 bg-gradient-to-br from-white via-cream to-dusty-blue/40 p-5 sm:p-8 shadow-md"
               role="img"
               aria-label="Overview card of Duaen Primary School learning environment"
             >
-              <div className="flex items-center justify-between border-b border-border pb-4">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-navy text-white">
-                    <GraduationCap className="h-5 w-5" aria-hidden="true" />
+              <div className="border-b border-border pb-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy text-white shadow-xs">
+                      <GraduationCap className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-heading text-base sm:text-lg font-bold text-navy leading-snug">
+                        Duaen Primary School
+                      </h3>
+                      <p className="text-xs text-text-secondary leading-normal mt-0.5">
+                        D-Block, Ghaziabad, UP 201003
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-heading text-base font-bold text-navy">
-                      Duaen Primary School
-                    </h3>
-                    <p className="text-xs text-text-secondary">
-                      D-Block, Ghaziabad, UP 201003
-                    </p>
+                  <div className="sm:self-center pl-14 sm:pl-0">
+                    <span className="inline-flex items-center rounded-md bg-navy/10 px-2.5 py-1 text-xs font-semibold text-navy border border-navy/15">
+                      Active School
+                    </span>
                   </div>
                 </div>
-                <span className="text-xs font-semibold text-navy">
-                  Active School
-                </span>
               </div>
 
               {/* School Visual Placeholder with Gradient */}
@@ -743,27 +752,31 @@ export default function HomePage() {
           {/* Left Column: Visual Showcase Card */}
           <div className="order-2 lg:order-1 lg:col-span-5">
             <div
-              className="rounded-2xl border border-border bg-gradient-to-br from-cream via-white to-dusty-blue/20 p-6 sm:p-8 shadow-sm"
+              className="rounded-2xl border border-border bg-gradient-to-br from-cream via-white to-dusty-blue/20 p-5 sm:p-8 shadow-sm"
               role="img"
               aria-label="Illustration representing women's vocational sewing and self-reliance training"
             >
-              <div className="flex items-center justify-between border-b border-border pb-4">
-                <div className="flex items-center gap-2.5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-terracotta text-white">
-                    <Heart className="h-5 w-5" aria-hidden="true" />
+              <div className="border-b border-border pb-4">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-terracotta text-white shadow-xs">
+                      <Heart className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="font-heading text-base sm:text-lg font-bold text-navy leading-snug">
+                        Vocational Sewing Centre
+                      </h3>
+                      <p className="text-xs text-text-secondary leading-normal mt-0.5">
+                        Skills for Economic Independence
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-heading text-base font-bold text-navy">
-                      Vocational Sewing Centre
-                    </h3>
-                    <p className="text-xs text-text-secondary">
-                      Skills for Economic Independence
-                    </p>
+                  <div className="sm:self-center pl-14 sm:pl-0">
+                    <span className="inline-flex items-center rounded-md bg-terracotta/10 px-2.5 py-1 text-xs font-semibold text-terracotta border border-terracotta/20">
+                      Vocational Hub
+                    </span>
                   </div>
                 </div>
-                <span className="text-xs font-semibold text-terracotta">
-                  Vocational Hub
-                </span>
               </div>
 
               {/* Centre Visual Placeholder with Gradient */}

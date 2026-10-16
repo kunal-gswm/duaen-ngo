@@ -496,11 +496,11 @@ export default function ProgramsPage() {
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-4 bg-cream/30 border-t border-border/60 flex items-center justify-between text-xs">
+                <div className="p-4 bg-cream/30 border-t border-border/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
                   <span className="font-semibold text-navy">Clothing &amp; Care Packages Drive</span>
                   <Link
                     to="/impact#cloth-distribution-campaign"
-                    className="font-medium text-terracotta hover:underline inline-flex items-center gap-1"
+                    className="font-medium text-terracotta hover:underline inline-flex items-center gap-1 whitespace-nowrap self-start sm:self-auto"
                   >
                     <span>View Campaign</span>
                     <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
