@@ -235,7 +235,7 @@ export default function DonatePage() {
                   Official Contribution Notice
                 </span>
               </div>
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-white/90">
                 <Clock className="h-3.5 w-3.5" aria-hidden="true" />
                 Details Under Finalization
               </span>

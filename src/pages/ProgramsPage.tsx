@@ -7,7 +7,6 @@ import {
   Monitor,
   HandHeart,
   MapPin,
-  BookOpen,
   Scissors,
   HeartPulse,
   ShieldAlert,
@@ -74,10 +73,9 @@ export default function ProgramsPage() {
       <Section id="education" background="white" className="scroll-mt-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 text-xs font-semibold text-terracotta">
-              <BookOpen className="h-3.5 w-3.5" aria-hidden="true" />
-              <span>Flagship Education Initiative</span>
-            </div>
+            <p className="text-xs font-bold uppercase tracking-wider text-terracotta">
+              Flagship Education Initiative
+            </p>
 
             <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
               Education & Duaen Primary School
@@ -194,10 +192,9 @@ export default function ProgramsPage() {
 
           {/* Right: Content */}
           <div className="order-1 lg:order-2 lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white px-3.5 py-1 text-xs font-semibold text-terracotta border border-border">
-              <Heart className="h-3.5 w-3.5" aria-hidden="true" />
-              <span>Skills, Wellbeing & Independence</span>
-            </div>
+            <p className="text-xs font-bold uppercase tracking-wider text-terracotta">
+              Skills, Wellbeing & Independence
+            </p>
 
             <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
               Women's Empowerment
@@ -600,10 +597,9 @@ export default function ProgramsPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Content */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 text-xs font-semibold text-terracotta">
-              <Monitor className="h-3.5 w-3.5" aria-hidden="true" />
-              <span>Digital Literacy & Exposure</span>
-            </div>
+            <p className="text-xs font-bold uppercase tracking-wider text-terracotta">
+              Digital Literacy & Exposure
+            </p>
 
             <h2 className="font-heading text-3xl font-bold text-navy sm:text-4xl">
               Computer Learning
@@ -754,10 +750,9 @@ export default function ProgramsPage() {
           <div className="rounded-2xl border border-border bg-white p-8 shadow-xs">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-3">
-                <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3 py-1 text-xs font-semibold text-navy">
-                  <GraduationCap className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
-                  <span>College Collaboration</span>
-                </div>
+                <p className="text-xs font-bold uppercase tracking-wider text-terracotta">
+                  College Collaboration
+                </p>
                 <h3 className="font-heading text-2xl font-bold text-navy">
                   Empowering Youth Through University Partnerships
                 </h3>

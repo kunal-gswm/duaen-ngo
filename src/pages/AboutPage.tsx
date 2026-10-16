@@ -9,7 +9,6 @@ import {
   Eye,
   CheckCircle2,
   MapPin,
-  School,
   ArrowRight,
   ShieldCheck,
   UserCheck,
@@ -423,10 +422,9 @@ export default function AboutPage() {
       <Section background="cream" id="school">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-terracotta/10 px-3.5 py-1 text-xs font-semibold text-terracotta">
-              <School className="h-3.5 w-3.5" aria-hidden="true" />
-              <span>Flagship Educational Initiative</span>
-            </div>
+            <p className="text-xs font-bold uppercase tracking-wider text-terracotta">
+              Flagship Educational Initiative
+            </p>
 
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-navy">
               {ORG.schoolName}
@@ -583,7 +581,7 @@ export default function AboutPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cream text-navy">
                     <UserCheck className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <span className="rounded-full bg-cream px-3 py-1 text-xs font-medium text-text-secondary border border-border">
+                  <span className="text-xs font-medium text-text-secondary">
                     Role Pending Confirmation
                   </span>
                 </div>
@@ -608,7 +606,7 @@ export default function AboutPage() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-dusty-blue text-navy">
                     <UserCheck className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <span className="rounded-full bg-dusty-blue px-3 py-1 text-xs font-medium text-navy">
+                  <span className="text-xs font-semibold text-navy uppercase tracking-wider">
                     Field Operations
                   </span>
                 </div>

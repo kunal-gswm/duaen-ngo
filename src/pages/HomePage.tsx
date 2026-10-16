@@ -84,15 +84,6 @@ export default function HomePage() {
           <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12 lg:gap-8">
             {/* Left Column: Headline and Actions */}
             <div className="lg:col-span-7">
-              {/* Tagline Badge */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-dusty-blue/30 bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-semibold tracking-wide text-dusty-blue uppercase mb-6 backdrop-blur-xs">
-                <span
-                  className="inline-block h-2 w-2 rounded-full bg-mustard"
-                  aria-hidden="true"
-                />
-                {ORG.tagline}
-              </div>
-
               {/* Headline */}
               <h1
                 id="hero-heading"
@@ -266,9 +257,9 @@ export default function HomePage() {
       {/* SECTION B: INTRODUCTION */}
       <Section background="cream" id="intro" className="border-b border-border">
         <div className="mx-auto max-w-4xl text-center">
-          <span className="inline-block rounded-full bg-terracotta/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-terracotta mb-4">
+          <p className="text-xs font-bold uppercase tracking-wider text-terracotta mb-3">
             About Our Organization
-          </span>
+          </p>
           <h2 className="font-heading text-2xl font-bold sm:text-3xl lg:text-4xl text-navy leading-snug">
             Duaen Foundation NGO is a social welfare organization working to empower
             underprivileged communities through education, women&apos;s empowerment,
@@ -391,7 +382,7 @@ export default function HomePage() {
                     <GraduationCap className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <div>
-                    <span className="inline-block rounded-full bg-terracotta/15 px-3 py-0.5 text-xs font-semibold text-terracotta">
+                    <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                       Flagship Initiative
                     </span>
                     <h3 className="font-heading text-xl sm:text-2xl font-bold text-navy mt-1">
@@ -611,10 +602,9 @@ export default function HomePage() {
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Descriptive Narrative */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full bg-navy/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-navy mb-4">
-              <BookOpen className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
+            <p className="text-xs font-bold uppercase tracking-wider text-terracotta mb-3">
               Featured Educational Initiative
-            </div>
+            </p>
 
             <h2 className="font-heading text-2xl font-bold sm:text-3xl lg:text-4xl text-navy leading-tight">
               Duaen Primary School — Free Quality Education in Ghaziabad
@@ -703,7 +693,7 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-                <span className="rounded-full bg-navy/10 px-2.5 py-0.5 text-xs font-semibold text-navy">
+                <span className="text-xs font-semibold text-navy">
                   Active School
                 </span>
               </div>
@@ -771,7 +761,7 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-                <span className="rounded-full bg-terracotta/10 px-2.5 py-0.5 text-xs font-semibold text-terracotta">
+                <span className="text-xs font-semibold text-terracotta">
                   Vocational Hub
                 </span>
               </div>
@@ -825,10 +815,9 @@ export default function HomePage() {
 
           {/* Right Column: Narrative */}
           <div className="order-1 lg:order-2 lg:col-span-7">
-            <div className="inline-flex items-center gap-2 rounded-full bg-terracotta/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-terracotta mb-4">
-              <Sparkles className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
+            <p className="text-xs font-bold uppercase tracking-wider text-terracotta mb-3">
               Vocational Training &amp; Livelihoods
-            </div>
+            </p>
 
             <h2 className="font-heading text-2xl font-bold sm:text-3xl lg:text-4xl text-navy leading-tight">
               Fostering Self-Reliance Through Vocational Sewing &amp; Skills
@@ -912,10 +901,10 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent pointer-events-none" />
               <div className="absolute bottom-4 left-4 right-4 text-white">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-terracotta px-3 py-1 text-xs font-bold text-white uppercase tracking-wider mb-2 shadow-xs">
+                <p className="text-xs font-bold uppercase tracking-wider text-mustard mb-1.5 flex items-center gap-1.5">
                   <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
                   30 November 2025
-                </span>
+                </p>
                 <p className="font-heading text-base sm:text-lg font-bold text-white">
                   Cloth &amp; Seasonal Relief Distribution Campaign
                 </p>
@@ -942,10 +931,9 @@ export default function HomePage() {
 
           {/* Right Column: Narrative & Factual Overview */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 text-xs font-semibold text-terracotta">
-              <Users className="h-3.5 w-3.5" aria-hidden="true" />
-              <span>Documented Field Activity</span>
-            </div>
+            <p className="text-xs font-bold uppercase tracking-wider text-terracotta">
+              Documented Field Activity
+            </p>
 
             <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-tight">
               Direct Grassroots Relief for Vulnerable Families
@@ -1028,7 +1016,7 @@ export default function HomePage() {
 
               <div className="rounded-2xl border border-border bg-white p-6 sm:p-8 transition-shadow hover:shadow-md">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-navy/10 px-3 py-0.5 text-xs font-semibold text-navy">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-navy">
                     <Calendar className="h-3 w-3" aria-hidden="true" />
                     22 February (Year unrecorded in source records)
                   </span>
@@ -1080,7 +1068,7 @@ export default function HomePage() {
 
               <div className="rounded-2xl border border-border bg-white p-6 sm:p-8 transition-shadow hover:shadow-md">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-terracotta/15 px-3 py-0.5 text-xs font-semibold text-terracotta">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-terracotta">
                     <Clock className="h-3 w-3" aria-hidden="true" />
                     Specialist-Led Student Workshop
                   </span>
@@ -1132,7 +1120,7 @@ export default function HomePage() {
 
               <div className="rounded-2xl border border-border bg-white p-6 sm:p-8 transition-shadow hover:shadow-md">
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-mustard/20 px-3 py-0.5 text-xs font-semibold text-navy">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-navy">
                     <Calendar className="h-3 w-3" aria-hidden="true" />
                     12 October 2026 (Date subject to confirmation)
                   </span>
@@ -1291,7 +1279,7 @@ export default function HomePage() {
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="rounded-full bg-navy/10 px-3 py-1 text-xs font-semibold text-navy">
+                <span className="text-xs font-bold uppercase tracking-wider text-navy">
                   Education
                 </span>
                 <GraduationCap className="h-5 w-5 text-navy/70" aria-hidden="true" />
@@ -1318,7 +1306,7 @@ export default function HomePage() {
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="rounded-full bg-terracotta/15 px-3 py-1 text-xs font-semibold text-terracotta">
+                <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                   Women&apos;s Empowerment
                 </span>
                 <Heart className="h-5 w-5 text-terracotta/70" aria-hidden="true" />
@@ -1345,7 +1333,7 @@ export default function HomePage() {
           >
             <div>
               <div className="flex items-center justify-between mb-4">
-                <span className="rounded-full bg-navy/10 px-3 py-1 text-xs font-semibold text-navy">
+                <span className="text-xs font-bold uppercase tracking-wider text-navy">
                   Healthcare
                 </span>
                 <Stethoscope className="h-5 w-5 text-navy/70" aria-hidden="true" />
@@ -1709,7 +1697,7 @@ export default function HomePage() {
           {/* Action Box: lg:col-span-5 */}
           <div className="lg:col-span-5 flex flex-col justify-between rounded-2xl border border-border bg-white p-6 sm:p-8 shadow-xs">
             <div>
-              <span className="rounded-full bg-terracotta/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-terracotta">
+              <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                 Online Enquiry
               </span>
               <h3 className="font-heading text-xl font-bold text-navy mt-3">
