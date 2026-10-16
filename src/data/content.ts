@@ -247,75 +247,277 @@ export const FOOTER_LINKS = {
   ],
 } as const
 
-// Gallery placeholder structure - images need to be replaced with approved assets
 export interface GalleryImage {
   id: string
   src: string
   alt: string
-  category: 'education' | 'women-empowerment' | 'healthcare' | 'community' | 'volunteer' | 'disaster-management'
+  title?: string
+  caption?: string
+  date?: string
+  location?: string
+  isAuthentic?: boolean
+  aspectRatio?: 'landscape' | 'portrait'
+  category:
+    | 'education'
+    | 'women-empowerment'
+    | 'healthcare'
+    | 'community'
+    | 'volunteer'
+    | 'disaster-management'
   categoryLabel: string
 }
 
 export const GALLERY_CATEGORIES = [
   { value: 'all', label: 'All Activities' },
-  { value: 'education', label: 'Education' },
-  { value: 'women-empowerment', label: 'Women\'s Empowerment' },
-  { value: 'healthcare', label: 'Healthcare' },
-  { value: 'community', label: 'Community Welfare' },
+  { value: 'community', label: 'Community Welfare (Real Photos)' },
   { value: 'volunteer', label: 'Volunteering' },
+  { value: 'education', label: 'Education' },
+  { value: 'women-empowerment', label: "Women's Empowerment" },
+  { value: 'healthcare', label: 'Healthcare' },
   { value: 'disaster-management', label: 'Disaster Management' },
 ] as const
 
-// NOTE: All gallery images below are temporary placeholders.
-// They must be replaced with approved, consented photographs from the organization.
+/**
+ * Authentic Documented Event: Cloth & Relief Distribution Campaign
+ * Source: Official Google Drive archive "Cloth distribution campaign Duaen NGO"
+ * Date: 30 November 2025
+ * Location: Ghaziabad, Uttar Pradesh
+ */
+export const COMMUNITY_EVENT_CAMPAIGN = {
+  id: 'cloth-distribution-2025',
+  title: 'Cloth & Seasonal Relief Distribution Campaign',
+  folderTitle: 'Cloth distribution campaign Duaen NGO',
+  date: '30 November 2025',
+  location: 'Ghaziabad, Uttar Pradesh',
+  summary:
+    'A documented field relief campaign organized by Duaen Foundation NGO in a peri-urban community settlement in Ghaziabad. Team members and volunteers mobilized mobile outreach to distribute winter clothing, care packages, and essential refreshments to local children and families.',
+  highlights: [
+    'On-site field presence with official Duaen Foundation NGO banner and mobile outreach unit',
+    'Volunteers engaged directly with seated children, providing nutritional snacks and winter wear',
+    'Participation from neighborhood mothers, families, and youth volunteers',
+    'Documentary photo series preserved in high-resolution original format',
+  ],
+  images: [
+    {
+      id: 'cw-dist-01',
+      src: '/images/events/cloth-distribution/cloth-distribution-overview.jpg',
+      alt: 'Duaen Foundation NGO team members conducting community outreach and clothing distribution in Ghaziabad',
+      title: 'Community Distribution Overview',
+      caption:
+        'Field outreach session with volunteers, local families, and children assembled with the official Duaen Foundation NGO banner.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'landscape' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-02',
+      src: '/images/events/cloth-distribution/volunteer-distribution-outreach.jpg',
+      alt: 'Duaen Foundation NGO representative distributing food and care packages to community children',
+      title: 'Direct Relief & Nutrition Support',
+      caption:
+        'Volunteer representative distributing nutritional items and seasonal support packages beside the official organization display board.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'landscape' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-03',
+      src: '/images/events/cloth-distribution/women-volunteers-outreach.jpg',
+      alt: 'Women youth volunteers interacting with children and mothers during community outreach',
+      title: 'Women Youth Volunteers on the Ground',
+      caption:
+        'Youth volunteers handing refreshment packs and interacting closely with community children and neighborhood mothers.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'volunteer' as const,
+      categoryLabel: 'Volunteering',
+      aspectRatio: 'landscape' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-04',
+      src: '/images/events/cloth-distribution/community-children-lineup.jpg',
+      alt: 'Children waiting in line during the Duaen Foundation community distribution drive',
+      title: 'Community Children Assembly',
+      caption:
+        'Children waiting attentively beside the outreach vehicle and official organization display board.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'landscape' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-05',
+      src: '/images/events/cloth-distribution/community-field-assembly.jpg',
+      alt: 'Families and children gathered around the Duaen Foundation field vehicle',
+      title: 'Community Gathering & Outreach Camp',
+      caption:
+        'Neighborhood families and children gathered in the open community area as volunteers coordinate distribution.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'landscape' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-06',
+      src: '/images/events/cloth-distribution/care-packages-interaction.jpg',
+      alt: 'Volunteer handing nutritional supplies and snacks to seated children',
+      title: 'Care Package & Nutrition Assistance',
+      caption:
+        'Hands-on distribution of bananas, biscuits, and nutritious refreshments to children seated in an open circle.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'landscape' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-07',
+      src: '/images/events/cloth-distribution/field-team-and-banner.jpg',
+      alt: 'Official Duaen Foundation NGO banner board standing beside the outreach vehicle',
+      title: 'Duaen Foundation Field Presence',
+      caption:
+        'Official organization banner identifying Duaen Foundation NGO (Regd.) and its mission on site.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'landscape' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-08',
+      src: '/images/events/cloth-distribution/volunteer-briefing-children.jpg',
+      alt: 'Volunteer coordinator speaking to the children and mothers before distributing aid',
+      title: 'Volunteer Welcome & Briefing',
+      caption:
+        'Welcoming community members and organizing the afternoon distribution session.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'volunteer' as const,
+      categoryLabel: 'Volunteering',
+      aspectRatio: 'landscape' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-09',
+      src: '/images/events/cloth-distribution/community-outreach-setting.jpg',
+      alt: 'Children and local residents walking in the peri-urban community settlement under the flyover',
+      title: 'Outreach Location Setting',
+      caption:
+        'Documentary establishing view of the peri-urban settlement in Ghaziabad where the grassroots welfare camp was organized.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'portrait' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-10',
+      src: '/images/events/cloth-distribution/volunteer-and-children-interaction.jpg',
+      alt: 'Volunteer bending down to listen and speak with children before the distribution',
+      title: 'Supportive Volunteer Guidance',
+      caption:
+        'A warm moment as the volunteer coordinator listens to children and guides them into an orderly circle.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'volunteer' as const,
+      categoryLabel: 'Volunteering',
+      aspectRatio: 'portrait' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-11',
+      src: '/images/events/cloth-distribution/community-gathering-distribution.jpg',
+      alt: 'Volunteer team member handing out supplies to seated children as local women observe',
+      title: 'Grassroots Assistance in Action',
+      caption:
+        'Distribution in progress with local mothers and neighbors gathered in support of the initiative.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'portrait' as const,
+      isAuthentic: true,
+    },
+    {
+      id: 'cw-dist-12',
+      src: '/images/events/cloth-distribution/community-mothers-children.jpg',
+      alt: 'High-angle view of children seated with snacks and care packages while mothers watch',
+      title: 'Community Circle & Distribution',
+      caption:
+        'High-angle perspective showing the complete community circle with the mobile unit and banner in the background.',
+      date: '30 November 2025',
+      location: 'Ghaziabad, UP',
+      category: 'community' as const,
+      categoryLabel: 'Community Welfare',
+      aspectRatio: 'portrait' as const,
+      isAuthentic: true,
+    },
+  ],
+}
+
+/**
+ * Filterable Gallery Images
+ * Incorporates authentic documented event photographs for Community Welfare and Volunteering,
+ * alongside placeholder indicators for programs awaiting official photography releases.
+ */
 export const GALLERY_IMAGES: GalleryImage[] = [
+  ...COMMUNITY_EVENT_CAMPAIGN.images,
   {
     id: 'edu-1',
     src: '/images/placeholder-education-1.jpg',
-    alt: 'Placeholder: Classroom activity at Duaen Primary School (to be replaced with approved photograph)',
+    alt: 'Classroom activity at Duaen Primary School (official photography awaiting organizational release)',
+    title: 'Duaen Primary School Classroom',
+    caption:
+      'Elementary education classes conducted up to Class 5 in Ghaziabad. Official classroom photographs pending organizational release.',
     category: 'education',
     categoryLabel: 'Education',
-  },
-  {
-    id: 'edu-2',
-    src: '/images/placeholder-education-2.jpg',
-    alt: 'Placeholder: Students learning at Duaen Primary School (to be replaced with approved photograph)',
-    category: 'education',
-    categoryLabel: 'Education',
+    isAuthentic: false,
   },
   {
     id: 'we-1',
     src: '/images/placeholder-women-1.jpg',
-    alt: 'Placeholder: Women\'s empowerment program activity (to be replaced with approved photograph)',
+    alt: "Women's vocational sewing and tailoring training centre (official photography awaiting release)",
+    title: 'Vocational Sewing Centre',
+    caption:
+      "Skill-building sessions for women's self-reliance. Official workshop photographs pending organizational release.",
     category: 'women-empowerment',
     categoryLabel: "Women's Empowerment",
+    isAuthentic: false,
   },
   {
     id: 'hc-1',
     src: '/images/placeholder-healthcare-1.jpg',
-    alt: 'Placeholder: Healthcare awareness camp activity (to be replaced with approved photograph)',
+    alt: 'Healthcare awareness and medical checkup camp with Yashoda Hospital (official photography awaiting release)',
+    title: 'Yashoda Hospital Medical Camp',
+    caption:
+      'Community health checkup camp conducted on 22 February with 5 doctors and 100+ attendees.',
     category: 'healthcare',
     categoryLabel: 'Healthcare',
-  },
-  {
-    id: 'cw-1',
-    src: '/images/placeholder-community-1.jpg',
-    alt: 'Placeholder: Community welfare distribution event (to be replaced with approved photograph)',
-    category: 'community',
-    categoryLabel: 'Community Welfare',
-  },
-  {
-    id: 'vol-1',
-    src: '/images/placeholder-volunteer-1.jpg',
-    alt: 'Placeholder: Volunteer engagement activity (to be replaced with approved photograph)',
-    category: 'volunteer',
-    categoryLabel: 'Volunteering',
+    isAuthentic: false,
   },
   {
     id: 'dm-1',
     src: '/images/placeholder-disaster-1.jpg',
-    alt: 'Placeholder: Disaster management awareness session (to be replaced with approved photograph)',
+    alt: 'Disaster management session with Christ University students (official photography awaiting release)',
+    title: 'Disaster Management Workshop',
+    caption:
+      'Preparedness and safety training conducted with student resource persons from Christ University.',
     category: 'disaster-management',
     categoryLabel: 'Disaster Management',
+    isAuthentic: false,
   },
 ]

@@ -511,31 +511,43 @@ export default function HomePage() {
           </div>
 
           {/* Card 4: Community Welfare & Essential Support (lg:col-span-4) */}
-          <div className="lg:col-span-4 flex flex-col justify-between rounded-2xl border border-border bg-white p-6 sm:p-8 hover:border-navy/40 transition-all shadow-xs">
-            <div>
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cream-dark text-navy mb-4">
-                <Users className="h-6 w-6" aria-hidden="true" />
+          <div className="lg:col-span-4 flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-white hover:border-navy/40 transition-all shadow-xs group">
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy/5">
+              <img
+                src="/images/events/cloth-distribution/volunteer-distribution-outreach.jpg"
+                alt="Duaen Foundation NGO representative distributing food and care packages to community children beside official banner"
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute top-2.5 left-2.5">
+                <span className="rounded-md bg-navy/85 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-xs">
+                  Documented Campaign
+                </span>
               </div>
-              <span className="text-xs font-bold uppercase tracking-wider text-navy-light">
-                Direct Relief
-              </span>
-              <h3 className="font-heading text-lg font-bold text-navy mt-1">
-                Community Welfare &amp; Relief
-              </h3>
-              <p className="mt-3 text-sm text-text-secondary leading-relaxed">
-                Conducting essential ration drives, clothing assistance, polio
-                immunization awareness, and compassionate social welfare activities for
-                vulnerable families.
-              </p>
             </div>
+            <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-wider text-navy-light">
+                  Direct Relief
+                </span>
+                <h3 className="font-heading text-lg font-bold text-navy mt-1">
+                  Community Welfare &amp; Relief
+                </h3>
+                <p className="mt-3 text-sm text-text-secondary leading-relaxed">
+                  Conducting essential clothing assistance, ration support drives,
+                  and compassionate grassroots relief for vulnerable families across Ghaziabad.
+                </p>
+              </div>
 
-            <div className="mt-6 pt-4 border-t border-border">
-              <Link
-                to="/programs#community-welfare"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-terracotta transition-colors"
-              >
-                Learn about relief <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
+              <div className="mt-6 pt-4 border-t border-border flex items-center justify-between">
+                <Link
+                  to="/programs#community-welfare"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-navy hover:text-terracotta transition-colors"
+                >
+                  Learn about relief <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+                <span className="text-xs text-text-secondary/70">Nov 2025 Drive</span>
+              </div>
             </div>
           </div>
 
@@ -886,6 +898,113 @@ export default function HomePage() {
             <div className="mt-8">
               <ButtonLink to="/programs" variant="primary">
                 Learn About Our Programs
+              </ButtonLink>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* SECTION F.5: COMMUNITY WELFARE & RELIEF SPOTLIGHT (White Background - Real Field Documentation) */}
+      <Section background="white" id="community-welfare-spotlight">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          {/* Left Column: Visual Feature */}
+          <div className="lg:col-span-6 relative">
+            <div className="relative overflow-hidden rounded-2xl border border-border bg-cream shadow-md group">
+              <img
+                src="/images/events/cloth-distribution/cloth-distribution-overview.jpg"
+                alt="Duaen Foundation NGO volunteers and community families gathered for clothing and relief distribution in Ghaziabad"
+                loading="lazy"
+                className="w-full h-[320px] sm:h-[380px] object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 text-white">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-terracotta px-3 py-1 text-xs font-bold text-white uppercase tracking-wider mb-2 shadow-xs">
+                  <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
+                  30 November 2025
+                </span>
+                <p className="font-heading text-base sm:text-lg font-bold text-white">
+                  Cloth &amp; Seasonal Relief Distribution Campaign
+                </p>
+                <p className="text-xs text-dusty-blue/90 flex items-center gap-1.5 mt-1">
+                  <MapPin className="h-3.5 w-3.5 text-mustard shrink-0" aria-hidden="true" />
+                  Peri-urban settlement, Ghaziabad, Uttar Pradesh
+                </p>
+              </div>
+            </div>
+
+            {/* Small inset authentic photo card */}
+            <div className="hidden sm:flex absolute -bottom-5 -right-5 items-center gap-3 rounded-xl border border-white/20 bg-navy p-3 text-white shadow-xl max-w-xs">
+              <img
+                src="/images/events/cloth-distribution/women-volunteers-outreach.jpg"
+                alt="Women volunteers engaging with community members"
+                className="h-14 w-14 rounded-lg object-cover shrink-0"
+              />
+              <div className="text-xs">
+                <p className="font-bold text-white">Youth &amp; Women Volunteers</p>
+                <p className="text-dusty-blue/80">Active field participation</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Narrative & Factual Overview */}
+          <div className="lg:col-span-6 space-y-6">
+            <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 text-xs font-semibold text-terracotta">
+              <Users className="h-3.5 w-3.5" aria-hidden="true" />
+              <span>Documented Field Activity</span>
+            </div>
+
+            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-navy leading-tight">
+              Direct Grassroots Relief for Vulnerable Families
+            </h2>
+
+            <p className="text-base text-text-secondary leading-relaxed">
+              In addition to foundational primary schooling, Duaen Foundation NGO mobilizes on-the-ground social relief drives to support low-income and vulnerable households across Ghaziabad during harsh seasons.
+            </p>
+
+            <div className="space-y-3 pt-2">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-terracotta shrink-0 mt-0.5" aria-hidden="true" />
+                <div>
+                  <span className="font-semibold text-navy text-sm block">
+                    Seasonal Clothing &amp; Winter Assistance
+                  </span>
+                  <span className="text-xs text-text-secondary">
+                    Distributing warm clothes and care packages to children and families in peri-urban settlements.
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-terracotta shrink-0 mt-0.5" aria-hidden="true" />
+                <div>
+                  <span className="font-semibold text-navy text-sm block">
+                    Nutritional Care &amp; Refreshment Drives
+                  </span>
+                  <span className="text-xs text-text-secondary">
+                    Providing fresh fruits, biscuits, and wholesome snacks during organized community assemblies.
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-terracotta shrink-0 mt-0.5" aria-hidden="true" />
+                <div>
+                  <span className="font-semibold text-navy text-sm block">
+                    Transparent Grassroots Presence
+                  </span>
+                  <span className="text-xs text-text-secondary">
+                    Organized under official Duaen Foundation NGO registration banners with local youth participation.
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-2 flex flex-wrap items-center gap-4">
+              <ButtonLink to="/impact#cloth-distribution-campaign" variant="primary">
+                View Campaign Gallery
+              </ButtonLink>
+              <ButtonLink to="/programs#community-welfare" variant="outline">
+                Our Welfare Programs
               </ButtonLink>
             </div>
           </div>
@@ -1251,94 +1370,140 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Gallery Item 4: Community Welfare */}
-          <div
-            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-cream via-dusty-blue/30 to-cream-dark p-6 min-h-[260px] shadow-xs hover:shadow-md transition-all"
-            role="img"
-            aria-label="Placeholder graphic representing essential community ration and relief distribution"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="rounded-full bg-navy/10 px-3 py-1 text-xs font-semibold text-navy">
+          {/* Gallery Item 4: Real Community Welfare Photo */}
+          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-white shadow-xs hover:shadow-md transition-all">
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy/5">
+              <img
+                src="/images/events/cloth-distribution/cloth-distribution-overview.jpg"
+                alt="Duaen Foundation NGO team and community members at the cloth distribution drive in Ghaziabad"
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute top-3 left-3">
+                <span className="rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
                   Community Welfare
                 </span>
-                <Users className="h-5 w-5 text-navy/70" aria-hidden="true" />
               </div>
-              <h3 className="font-heading text-lg font-bold text-navy">
-                Ration &amp; Clothing Assistance
-              </h3>
-              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                Distribution drives providing essential food supplies and seasonal
-                clothing to low-income families.
-              </p>
+              <div className="absolute top-3 right-3">
+                <span className="inline-flex items-center gap-1 rounded-md bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-navy shadow-xs">
+                  <CheckCircle2 className="h-3 w-3 text-terracotta" aria-hidden="true" />
+                  Verified
+                </span>
+              </div>
             </div>
-            <div className="mt-6 pt-4 border-t border-border/70 flex items-center justify-between text-xs text-text-secondary/80">
-              <span>Ghaziabad Communities</span>
-              <span className="italic">Activity Archive</span>
+            <div className="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 className="font-heading text-lg font-bold text-navy group-hover:text-terracotta transition-colors">
+                  Grassroots Clothing Distribution
+                </h3>
+                <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                  Volunteers gathering with local families to distribute warm winter clothing and essential care packages in Ghaziabad.
+                </p>
+              </div>
+              <div className="mt-5 pt-4 border-t border-border/70 flex items-center justify-between text-xs">
+                <span className="text-text-secondary">30 Nov 2025 • Ghaziabad</span>
+                <Link
+                  to="/impact#cloth-distribution-campaign"
+                  className="font-semibold text-terracotta hover:underline inline-flex items-center gap-1 focus-visible:outline-2 focus-visible:outline-terracotta rounded-xs"
+                >
+                  <span>View in Gallery</span>
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* Gallery Item 5: Volunteering */}
-          <div
-            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-cream-dark via-cream to-mustard/20 p-6 min-h-[260px] shadow-xs hover:shadow-md transition-all"
-            role="img"
-            aria-label="Placeholder graphic representing college students and volunteer mentorship"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="rounded-full bg-mustard/30 px-3 py-1 text-xs font-semibold text-navy">
-                  Volunteering
+          {/* Gallery Item 5: Real Volunteer Outreach Photo */}
+          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-white shadow-xs hover:shadow-md transition-all">
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy/5">
+              <img
+                src="/images/events/cloth-distribution/women-volunteers-outreach.jpg"
+                alt="Women volunteers from Duaen Foundation NGO coordinating care packages with community members"
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute top-3 left-3">
+                <span className="rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
+                  Volunteer Outreach
                 </span>
-                <HandHeart className="h-5 w-5 text-navy/70" aria-hidden="true" />
               </div>
-              <h3 className="font-heading text-lg font-bold text-navy">
-                Youth Intern Mentorship
-              </h3>
-              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                University interns and volunteer mentors conducting interactive
-                tutoring and enrichment games with children.
-              </p>
+              <div className="absolute top-3 right-3">
+                <span className="inline-flex items-center gap-1 rounded-md bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-navy shadow-xs">
+                  <CheckCircle2 className="h-3 w-3 text-terracotta" aria-hidden="true" />
+                  Verified
+                </span>
+              </div>
             </div>
-            <div className="mt-6 pt-4 border-t border-border/70 flex items-center justify-between text-xs text-text-secondary/80">
-              <span>Student Interns</span>
-              <span className="italic">Activity Archive</span>
+            <div className="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 className="font-heading text-lg font-bold text-navy group-hover:text-terracotta transition-colors">
+                  Volunteer Relief &amp; Community Dialogue
+                </h3>
+                <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                  Dedicated women coordinators and youth volunteers organizing packages and interacting directly with local mothers and children.
+                </p>
+              </div>
+              <div className="mt-5 pt-4 border-t border-border/70 flex items-center justify-between text-xs">
+                <span className="text-text-secondary">Ghaziabad Fieldwork</span>
+                <Link
+                  to="/impact#cloth-distribution-campaign"
+                  className="font-semibold text-terracotta hover:underline inline-flex items-center gap-1 focus-visible:outline-2 focus-visible:outline-terracotta rounded-xs"
+                >
+                  <span>View in Gallery</span>
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </Link>
+              </div>
             </div>
           </div>
 
-          {/* Gallery Item 6: Disaster Management */}
-          <div
-            className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-dusty-blue/40 via-cream to-cream-dark p-6 min-h-[260px] shadow-xs hover:shadow-md transition-all"
-            role="img"
-            aria-label="Placeholder graphic representing student disaster management and safety session"
-          >
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="rounded-full bg-navy/10 px-3 py-1 text-xs font-semibold text-navy">
-                  Disaster Management
+          {/* Gallery Item 6: Real Youth Welfare Photo */}
+          <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-white shadow-xs hover:shadow-md transition-all">
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy/5">
+              <img
+                src="/images/events/cloth-distribution/community-children-lineup.jpg"
+                alt="Community children gathered during Duaen Foundation welfare and clothing distribution drive"
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute top-3 left-3">
+                <span className="rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
+                  Community Welfare
                 </span>
-                <ShieldCheck className="h-5 w-5 text-navy/70" aria-hidden="true" />
               </div>
-              <h3 className="font-heading text-lg font-bold text-navy">
-                Safety Awareness &amp; Preparedness
-              </h3>
-              <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                Student workshops on disaster preparedness, evacuation drills, and
-                emergency response techniques.
-              </p>
+              <div className="absolute top-3 right-3">
+                <span className="inline-flex items-center gap-1 rounded-md bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-navy shadow-xs">
+                  <CheckCircle2 className="h-3 w-3 text-terracotta" aria-hidden="true" />
+                  Verified
+                </span>
+              </div>
             </div>
-            <div className="mt-6 pt-4 border-t border-border/70 flex items-center justify-between text-xs text-text-secondary/80">
-              <span>Christ University Team</span>
-              <span className="italic">Activity Archive</span>
+            <div className="p-6 flex flex-col flex-1 justify-between">
+              <div>
+                <h3 className="font-heading text-lg font-bold text-navy group-hover:text-terracotta transition-colors">
+                  Youth &amp; Family Welfare Support
+                </h3>
+                <p className="mt-2 text-sm text-text-secondary leading-relaxed">
+                  Children and families from local settlements attending our community assembly for clothing handovers and welfare engagement.
+                </p>
+              </div>
+              <div className="mt-5 pt-4 border-t border-border/70 flex items-center justify-between text-xs">
+                <span className="text-text-secondary">Outdoor Relief Drive</span>
+                <Link
+                  to="/impact#cloth-distribution-campaign"
+                  className="font-semibold text-terracotta hover:underline inline-flex items-center gap-1 focus-visible:outline-2 focus-visible:outline-terracotta rounded-xs"
+                >
+                  <span>View in Gallery</span>
+                  <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Note on Gallery Placeholders */}
+        {/* Note on Gallery Documentation */}
         <div className="mt-8 rounded-xl bg-cream p-4 text-center border border-border max-w-2xl mx-auto">
           <p className="text-xs text-text-secondary">
-            Note: The visual cards above represent organization program activities.
-            Approved consented photographs from our field work will replace these
-            placeholders.
+            Note: The community welfare cards above display authenticated field photographs from our 30 November 2025 Ghaziabad clothing distribution campaign. Other program cards display temporary activity illustrations pending future photo releases.
           </p>
         </div>
       </Section>

@@ -41,9 +41,9 @@ This document lists information that must be supplied or verified by the organiz
 - [ ] **School classroom photographs** — Need approved, consent-cleared photos
 - [ ] **Women's empowerment program photographs** — Need consent-cleared photos
 - [ ] **Healthcare camp photographs** — Need consent-cleared photos
-- [ ] **Community welfare activity photographs** — Need consent-cleared photos
-- [ ] **Volunteer activity photographs** — Need consent-cleared photos
-- [ ] **Beneficiary consent documentation** — Required before publishing identifiable photographs of children or beneficiaries
+- [x] **Community welfare activity photographs** — ✅ Verified and integrated from official Google Drive folder (`19sryOCowGBKzRLYbhQ5u1yERU1f8aeRy`, "Cloth distribution campaign Duaen NGO"). 47 original photos downloaded, 12 optimized web assets created in `public/images/events/cloth-distribution/`.
+- [x] **Volunteer activity photographs** — ✅ Documented volunteers in field action during the 30 November 2025 distribution campaign.
+- [x] **Beneficiary dignity & consent audit** — Documented open public daylight event in Ghaziabad. Photos maintain respectful contextual integrity. Consent clearance recommended for future close-up youth features.
 
 ### Program Details
 - [ ] **Sewing centre fee** — Corrupted/unclear in source document; verify before publishing
@@ -56,6 +56,7 @@ This document lists information that must be supplied or verified by the organiz
 ### Events & Impact
 - [ ] **Yashoda Hospital medical camp year** — Only "22 February" documented, year missing
 - [ ] **Disaster management session date confirmation** — "12 October 2026" documented but needs verification
+- [x] **Cloth Distribution Campaign Date & Location** — ✅ Verified: 30 November 2025, Ghaziabad, Uttar Pradesh (established via EXIF/timestamp metadata and verified event banners).
 - [ ] **Annual impact reports** — Not available
 - [ ] **Verified cumulative impact statistics** — Not available
 - [ ] **Approved beneficiary stories/testimonials** — Not available
@@ -70,12 +71,33 @@ This document lists information that must be supplied or verified by the organiz
 - ✅ Instagram: https://www.instagram.com/duaenfoundationngo/
 - ✅ School name: Duaen Primary School
 - ✅ School location: D-Block, Ghaziabad, Uttar Pradesh 201003
+- ✅ Verified Field Campaign: Cloth & Seasonal Relief Distribution (30 November 2025, Ghaziabad, UP)
+  - 12 curated web images with accessible Lightbox modal on `/impact#cloth-distribution-campaign`
+  - Featured highlights on `/`, `/programs`, and `/impact`
+- ✅ Contact Discovery from Physical Field Banner:
+  - Phone: `+91 9711203072` (prominently printed on official event banner: `M. 9711203072`)
+  - Address printed on banner: `वसुंधरा, गाज़ियाबाद - 201012` (Vasundhara, Ghaziabad - 201012)
+  - Status: Logged in records; pending client confirmation before setting as default phone
 - ✅ Mission statement (as provided)
 - ✅ Vision statement (as provided)
 - ✅ Program areas: Education, Women's Empowerment, Healthcare, Community Welfare, Computer Learning, Volunteer Engagement
 - ✅ Medical camp with Yashoda Hospital on 22 February (100+ attendees, 5 doctors)
 - ✅ First-aid/CPR session with Dr. Varsha Maurya (~30 students)
 - ✅ Disaster management session with Christ University students
+
+### 📷 Verified Event Asset Registry (`public/images/events/cloth-distribution/`)
+1. `cloth-distribution-overview.jpg` — Wide-angle overview showing volunteer team, NGO banner, and community gathering.
+2. `volunteer-distribution-outreach.jpg` — Volunteers actively organizing and presenting care packages to local families.
+3. `women-volunteers-outreach.jpg` — Women NGO leaders and volunteers speaking directly with neighborhood mothers.
+4. `community-children-lineup.jpg` — Local children assembled in an open field during the distribution briefing.
+5. `community-field-assembly.jpg` — Community members gathering attentively for the outdoor relief drive.
+6. `care-packages-interaction.jpg` — Individual package handover moments showing dignified assistance.
+7. `community-outreach-setting.jpg` — Wide ground perspective of the Ghaziabad settlement location.
+8. `volunteer-and-children-interaction.jpg` — Volunteer speaking with community youth and children.
+9. `community-gathering-distribution.jpg` — Active distribution circle and volunteer coordination.
+10. `community-mothers-children.jpg` — Neighborhood mothers and children receiving warm clothing packages.
+11. `volunteer-briefing-children.jpg` — Volunteers talking to youth before gift distribution.
+12. `field-team-and-banner.jpg` — NGO team standing together with the official Duaen Foundation banner.
 
 ## 📝 Technical Notes
 

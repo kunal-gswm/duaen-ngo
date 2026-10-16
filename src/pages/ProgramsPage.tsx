@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
   GraduationCap,
   Heart,
@@ -489,13 +490,111 @@ export default function ProgramsPage() {
             </div>
 
             <div className="lg:col-span-5">
-              <PlaceholderImage
-                alt="Community welfare and distribution drive"
-                label="Community welfare & distribution drive photograph (to be provided)"
-                icon={<Package className="h-10 w-10 text-navy" />}
-                aspectRatio="aspect-video sm:aspect-auto"
-                className="h-full min-h-[260px] w-full rounded-2xl border border-border/80 bg-gradient-to-br from-cream-dark to-dusty-blue shadow-xs"
-              />
+              <div className="group relative overflow-hidden rounded-2xl border border-border bg-white shadow-xs">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-navy/5">
+                  <img
+                    src="/images/events/cloth-distribution/cloth-distribution-overview.jpg"
+                    alt="Duaen Foundation NGO team distributing seasonal clothing and care packages in Ghaziabad"
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
+                      Ghaziabad Field Activity
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4 bg-cream/30 border-t border-border/60 flex items-center justify-between text-xs">
+                  <span className="font-semibold text-navy">Clothing &amp; Care Packages Drive</span>
+                  <Link
+                    to="/impact#cloth-distribution-campaign"
+                    className="font-medium text-terracotta hover:underline inline-flex items-center gap-1"
+                  >
+                    <span>View Campaign</span>
+                    <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Documentary Photo Strip: Authenticated Fieldwork */}
+          <div className="mt-8 pt-8 border-t border-border/80">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+              <div>
+                <h4 className="font-heading text-lg font-bold text-navy">
+                  Documented Grassroots Action: 30 November 2025
+                </h4>
+                <p className="text-xs text-text-secondary mt-1">
+                  Field moments from our open community distribution drive in Ghaziabad, Uttar Pradesh.
+                </p>
+              </div>
+              <Link
+                to="/impact#cloth-distribution-campaign"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-terracotta hover:underline shrink-0"
+              >
+                <span>View Full Photo Archive in Impact</span>
+                <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="group overflow-hidden rounded-xl border border-border bg-white shadow-xs">
+                <div className="relative aspect-[16/10] overflow-hidden bg-navy/5">
+                  <img
+                    src="/images/events/cloth-distribution/volunteer-distribution-outreach.jpg"
+                    alt="Volunteers arranging care packages"
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-3">
+                  <p className="font-heading text-xs font-bold text-navy">
+                    Package Coordination
+                  </p>
+                  <p className="text-[11px] text-text-secondary mt-0.5 line-clamp-1">
+                    Volunteers preparing warm clothing items for local families.
+                  </p>
+                </div>
+              </div>
+
+              <div className="group overflow-hidden rounded-xl border border-border bg-white shadow-xs">
+                <div className="relative aspect-[16/10] overflow-hidden bg-navy/5">
+                  <img
+                    src="/images/events/cloth-distribution/women-volunteers-outreach.jpg"
+                    alt="Women volunteers engaging with community members"
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-3">
+                  <p className="font-heading text-xs font-bold text-navy">
+                    Community Engagement
+                  </p>
+                  <p className="text-[11px] text-text-secondary mt-0.5 line-clamp-1">
+                    Women coordinators conducting direct, respectful dialogue.
+                  </p>
+                </div>
+              </div>
+
+              <div className="group overflow-hidden rounded-xl border border-border bg-white shadow-xs">
+                <div className="relative aspect-[16/10] overflow-hidden bg-navy/5">
+                  <img
+                    src="/images/events/cloth-distribution/community-children-lineup.jpg"
+                    alt="Community children attending outdoor welfare session"
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-3">
+                  <p className="font-heading text-xs font-bold text-navy">
+                    Youth &amp; Children Gathering
+                  </p>
+                  <p className="text-[11px] text-text-secondary mt-0.5 line-clamp-1">
+                    Children assembled during the outdoor distribution session.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

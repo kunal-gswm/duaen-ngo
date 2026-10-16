@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import {
   Camera,
@@ -14,13 +14,20 @@ import {
   Info,
   ExternalLink,
   ArrowRight,
+  MapPin,
+  CheckCircle2,
+  Maximize2,
+  Eye,
+  ShieldCheck,
 } from 'lucide-react'
 import { PageHero, Section, SectionHeading, ButtonLink } from '../components/ui'
 import SeoHead from '../components/SeoHead'
+import Lightbox, { type LightboxImage } from '../components/Lightbox'
 import {
   GALLERY_IMAGES,
   GALLERY_CATEGORIES,
   HEALTHCARE_EVENTS,
+  COMMUNITY_EVENT_CAMPAIGN,
   ORG,
 } from '../data/content'
 
@@ -86,6 +93,15 @@ const IMPACT_AREAS = [
 
 export default function ImpactPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all')
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxIndex, setLightboxIndex] = useState(0)
+  const [activeLightboxImages, setActiveLightboxImages] = useState<LightboxImage[]>([])
+
+  const openLightbox = useCallback((images: LightboxImage[], index: number) => {
+    setActiveLightboxImages(images)
+    setLightboxIndex(index)
+    setLightboxOpen(true)
+  }, [])
 
   const filteredImages =
     selectedCategory === 'all'
@@ -233,11 +249,114 @@ export default function ImpactPage() {
         </div>
       </Section>
 
+      {/* 4.5 Dedicated Event Showcase: Cloth & Seasonal Relief Distribution Campaign */}
+      <Section background="white" id="cloth-distribution-campaign">
+        <div className="space-y-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-border pb-6">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 text-xs font-semibold text-terracotta mb-3">
+                <ShieldCheck className="h-4 w-4" aria-hidden="true" />
+                <span>Verified Field Activity • {COMMUNITY_EVENT_CAMPAIGN.date}</span>
+              </div>
+              <h2 className="font-heading text-2xl font-bold text-navy sm:text-3xl lg:text-4xl">
+                {COMMUNITY_EVENT_CAMPAIGN.title}
+              </h2>
+              <p className="mt-3 text-base text-text-secondary max-w-3xl leading-relaxed">
+                {COMMUNITY_EVENT_CAMPAIGN.summary}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 text-xs font-semibold text-navy bg-cream/70 rounded-xl px-4 py-3 shrink-0 border border-border">
+              <MapPin className="h-4 w-4 text-terracotta shrink-0" aria-hidden="true" />
+              <span>{COMMUNITY_EVENT_CAMPAIGN.location}</span>
+            </div>
+          </div>
+
+          {/* Campaign Key Highlights */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {COMMUNITY_EVENT_CAMPAIGN.highlights.map((highlight, hIdx) => (
+              <div
+                key={hIdx}
+                className="flex items-start gap-3 rounded-xl border border-border bg-cream/30 p-4 text-xs text-text-secondary"
+              >
+                <CheckCircle2 className="h-4 w-4 text-terracotta shrink-0 mt-0.5" aria-hidden="true" />
+                <span className="leading-relaxed">{highlight}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Curated Grid of Authentic Photographs */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {COMMUNITY_EVENT_CAMPAIGN.images.map((img, idx) => (
+              <div
+                key={img.id}
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-xs transition-all hover:shadow-md hover:border-terracotta/40"
+              >
+                <button
+                  type="button"
+                  className="relative aspect-video w-full overflow-hidden bg-navy/5 text-left cursor-pointer focus-visible:outline-3 focus-visible:outline-terracotta"
+                  onClick={() => openLightbox(COMMUNITY_EVENT_CAMPAIGN.images, idx)}
+                  aria-label={`Enlarge photo: ${img.title}`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-navy-dark/0 group-hover:bg-navy-dark/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-xs font-bold text-navy shadow-md">
+                      <Eye className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
+                      <span>View Full Size</span>
+                    </span>
+                  </div>
+                  <div className="absolute top-2.5 left-2.5">
+                    <span className="rounded-md bg-navy/85 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-xs">
+                      {img.categoryLabel}
+                    </span>
+                  </div>
+                </button>
+
+                <div className="p-4 flex flex-col flex-1 justify-between">
+                  <div>
+                    <h3 className="font-heading text-sm font-bold text-navy group-hover:text-terracotta transition-colors">
+                      {img.title}
+                    </h3>
+                    <p className="mt-1.5 text-xs text-text-secondary leading-relaxed line-clamp-2">
+                      {img.caption}
+                    </p>
+                  </div>
+                  <div className="mt-3 pt-2.5 border-t border-border/60 flex items-center justify-between text-[11px] text-text-secondary/80">
+                    <span>{img.date}</span>
+                    <button
+                      type="button"
+                      onClick={() => openLightbox(COMMUNITY_EVENT_CAMPAIGN.images, idx)}
+                      className="font-semibold text-terracotta hover:underline inline-flex items-center gap-1 focus-visible:outline-2 focus-visible:outline-terracotta rounded-xs"
+                    >
+                      <span>Enlarge</span>
+                      <Maximize2 className="h-3 w-3" aria-hidden="true" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Privacy & Dignity Commitment Notice */}
+          <div className="rounded-xl border border-border bg-cream/40 p-4 text-xs text-text-secondary flex items-start gap-3">
+            <Info className="h-4 w-4 text-mustard shrink-0 mt-0.5" aria-hidden="true" />
+            <p className="leading-relaxed">
+              <strong className="text-navy">Community Dignity & Transparency:</strong> Duaen Foundation NGO records on-the-ground activities to document genuine social stewardship. All attendees participated willingly during this open relief session in Ghaziabad. We preserve full respectful contextual integrity across all published imagery.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* 5. Photo Gallery (Dusty-Blue Background) */}
       <Section background="dusty-blue" id="photo-gallery">
         <SectionHeading
           title="Activity Photo Gallery"
-          subtitle="Visual placeholders representing our grassroots work across classrooms, skills training, and community events."
+          subtitle="A comprehensive visual archive of our grassroots initiatives across community welfare, primary education, skills training, and volunteer participation."
         />
 
         {/* Filter Navigation and Buttons */}
@@ -326,44 +445,102 @@ export default function ImpactPage() {
         {/* Gallery Grid */}
         {filteredImages.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredImages.map((image) => (
+            {filteredImages.map((image, idx) => (
               <div
                 key={image.id}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-xs transition-all hover:shadow-md hover:border-navy/20"
               >
-                {/* Visual placeholder box with CSS gradient as instructed */}
-                <div
-                  className="relative aspect-[4/3] w-full bg-gradient-to-br from-cream-dark to-dusty-blue-dark flex flex-col items-center justify-center p-6 text-center select-none"
-                  role="img"
-                  aria-label={image.alt}
-                >
-                  <div className="w-14 h-14 rounded-full bg-white/80 backdrop-blur-xs flex items-center justify-center text-navy shadow-xs mb-3 group-hover:scale-105 transition-transform">
-                    <Camera className="w-7 h-7 text-navy" aria-hidden="true" />
-                  </div>
-                  <span className="inline-block rounded-full bg-navy/85 px-3 py-1 text-xs font-semibold tracking-wide text-white uppercase shadow-2xs">
-                    {image.categoryLabel}
-                  </span>
-                  <p className="text-xs text-text-secondary mt-2 font-medium">
-                    Activity Photo Placeholder
-                  </p>
-                </div>
-
-                {/* Card Information */}
-                <div className="p-5 flex flex-col flex-1">
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
+                {image.isAuthentic ? (
+                  /* Authentic photograph display */
+                  <button
+                    type="button"
+                    onClick={() => openLightbox(filteredImages, idx)}
+                    className="relative aspect-[4/3] w-full overflow-hidden bg-navy/5 text-left cursor-pointer focus-visible:outline-3 focus-visible:outline-terracotta"
+                    aria-label={`Enlarge photo: ${image.title || image.alt}`}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-navy-dark/0 group-hover:bg-navy-dark/35 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                      <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-navy shadow-md">
+                        <Eye className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
+                        <span>Enlarge Photo</span>
+                      </span>
+                    </div>
+                    <div className="absolute top-3 left-3">
+                      <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
+                        <span className="h-1.5 w-1.5 rounded-full bg-mustard" aria-hidden="true" />
+                        {image.categoryLabel}
+                      </span>
+                    </div>
+                  </button>
+                ) : (
+                  /* Visual placeholder box with CSS gradient for pending releases */
+                  <div
+                    className="relative aspect-[4/3] w-full bg-gradient-to-br from-cream-dark to-dusty-blue-dark flex flex-col items-center justify-center p-6 text-center select-none"
+                    role="img"
+                    aria-label={image.alt}
+                  >
+                    <div className="w-14 h-14 rounded-full bg-white/80 backdrop-blur-xs flex items-center justify-center text-navy shadow-xs mb-3 group-hover:scale-105 transition-transform">
+                      <Camera className="w-7 h-7 text-navy" aria-hidden="true" />
+                    </div>
+                    <span className="inline-block rounded-full bg-navy/85 px-3 py-1 text-xs font-semibold tracking-wide text-white uppercase shadow-2xs">
                       {image.categoryLabel}
                     </span>
-                    <span className="text-[11px] text-text-secondary/70">
-                      ID: {image.id}
-                    </span>
+                    <p className="text-xs text-text-secondary mt-2 font-medium">
+                      Official Photo Pending Release
+                    </p>
                   </div>
-                  <p className="text-sm font-medium text-navy leading-snug line-clamp-2">
-                    {image.alt.replace(/^Placeholder:\s*/i, '')}
-                  </p>
-                  <p className="mt-3 pt-3 border-t border-border/70 text-xs italic text-text-secondary/80">
-                    Consent-verified organizational photographs will be displayed once published.
-                  </p>
+                )}
+
+                {/* Card Information */}
+                <div className="p-5 flex flex-col flex-1 justify-between">
+                  <div>
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
+                        {image.categoryLabel}
+                      </span>
+                      {image.isAuthentic ? (
+                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-navy bg-cream px-2 py-0.5 rounded-md">
+                          <CheckCircle2 className="h-3 w-3 text-terracotta" aria-hidden="true" />
+                          Verified Event
+                        </span>
+                      ) : (
+                        <span className="text-[11px] text-text-secondary/70">
+                          ID: {image.id}
+                        </span>
+                      )}
+                    </div>
+
+                    <h3 className="font-heading text-base font-bold text-navy group-hover:text-terracotta transition-colors">
+                      {image.title || image.alt}
+                    </h3>
+
+                    {image.caption && (
+                      <p className="mt-2 text-xs text-text-secondary leading-relaxed line-clamp-2">
+                        {image.caption}
+                      </p>
+                    )}
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-border/70 flex items-center justify-between text-xs text-text-secondary">
+                    <span>{image.date || 'Activity Archive'}</span>
+                    {image.isAuthentic ? (
+                      <button
+                        type="button"
+                        onClick={() => openLightbox(filteredImages, idx)}
+                        className="font-semibold text-terracotta hover:underline inline-flex items-center gap-1"
+                      >
+                        <span>View</span>
+                        <Maximize2 className="h-3 w-3" aria-hidden="true" />
+                      </button>
+                    ) : (
+                      <span className="italic text-text-secondary/70">Awaiting Release</span>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
@@ -447,6 +624,15 @@ export default function ImpactPage() {
           </div>
         </div>
       </Section>
+
+      {/* Accessible Interactive Lightbox */}
+      <Lightbox
+        images={activeLightboxImages}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={setLightboxIndex}
+      />
     </div>
   )
 }

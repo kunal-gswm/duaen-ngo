@@ -122,15 +122,19 @@ Visit `http://localhost:5173` in your browser.
 d:\duaen-ngo\
 ├── public\
 │   ├── favicon.svg          # Custom SVG favicon
+│   ├── images\              # Curated authentic web assets
+│   │   └── events\
+│   │       └── cloth-distribution\  # 12 optimized photos from 30 Nov 2025 campaign
 │   └── icons.svg
 ├── src\
-│   ├── assets\              # Static assets
+│   ├── assets\              # Static brand assets (Logo & Emblem)
 │   ├── components\
 │   │   ├── Accordion.tsx    # Accessible WAI-ARIA accordion for FAQs
 │   │   ├── BackToTop.tsx    # Scroll-triggered floating back-to-top button
 │   │   ├── Footer.tsx       # Semantic footer with navigation and social links
 │   │   ├── Header.tsx       # Responsive header with mobile drawer & skip link
 │   │   ├── Layout.tsx       # Root layout wrapper with accessible landmark regions
+│   │   ├── Lightbox.tsx     # Accessible modal lightbox with keyboard nav & focus trap
 │   │   ├── RegistrationCard.tsx     # Bordered credential card with logo, ref, & certificate link
 │   │   ├── RegistrationsSection.tsx # Dedicated institutional credentials section
 │   │   ├── SeoHead.tsx      # Dynamic title, Open Graph, and meta description injector
