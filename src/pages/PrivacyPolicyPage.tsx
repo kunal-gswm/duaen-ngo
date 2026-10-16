@@ -234,7 +234,7 @@ export default function PrivacyPolicyPage() {
                     Email:{' '}
                     <a
                       href="mailto:duaenfoundation@gmail.com"
-                      className="font-medium text-navy hover:text-terracotta underline transition-colors focus-visible:outline-terracotta"
+                      className="font-medium text-navy hover:text-terracotta underline transition-colors focus-visible:outline-terracotta break-all"
                     >
                       duaenfoundation@gmail.com
                     </a>

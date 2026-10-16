@@ -189,61 +189,84 @@ export default function ImpactPage() {
         />
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative border-l-2 border-border ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
-            {HEALTHCARE_EVENTS.map((event, index) => (
-              <div key={index} className="relative group">
-                {/* Timeline node */}
-                <div
-                  className="absolute -left-[31px] sm:-left-[47px] top-1.5 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border-2 border-white bg-terracotta text-white shadow-xs"
-                  aria-hidden="true"
-                >
-                  <Calendar className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                </div>
+          <div className="relative pl-10 sm:pl-14 space-y-8 sm:space-y-10">
+            {/* Continuous vertical timeline line */}
+            <div
+              className="absolute top-6 bottom-6 left-4 sm:left-5 w-0.5 bg-border/80 -translate-x-1/2"
+              aria-hidden="true"
+            />
+            {HEALTHCARE_EVENTS.map((event, index) => {
+              const eventMeta = [
+                { category: 'Institutional Collaboration', date: '22 February (Year unrecorded in source records)' },
+                { category: 'Life Safety Education', date: 'Specialist-Led Student Workshop' },
+                { category: 'University Volunteer Collaboration', date: '12 October 2026 (Date subject to confirmation)' },
+              ][index]
 
-                {/* Event Card */}
-                <div className="rounded-xl border border-border bg-cream/30 p-6 sm:p-8 transition-all hover:bg-cream/50 hover:shadow-xs">
-                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 mb-3">
-                    <h3 className="font-heading text-xl font-bold text-navy">
+              return (
+                <div key={index} className="relative group">
+                  {/* Timeline node */}
+                  <div
+                    className="absolute left-4 sm:left-5 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-terracotta text-white shadow-xs ring-4 ring-white"
+                    aria-hidden="true"
+                  >
+                    <Calendar className="h-4 w-4" />
+                  </div>
+
+                  {/* Event Card */}
+                  <div className="rounded-2xl border border-border bg-cream/30 p-5 sm:p-7 transition-all hover:bg-cream/50 hover:shadow-xs">
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                      <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
+                        {eventMeta?.category || 'Healthcare Outreach'}
+                      </span>
+                      {eventMeta?.date && (
+                        <span className="inline-flex items-center gap-1.5 rounded-md bg-white/90 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
+                          <Calendar className="h-3.5 w-3.5 text-terracotta shrink-0" aria-hidden="true" />
+                          <span className="break-words">{eventMeta.date}</span>
+                        </span>
+                      )}
+                    </div>
+
+                    <h3 className="font-heading text-lg sm:text-xl font-bold text-navy">
                       {event.title}
                     </h3>
-                  </div>
 
-                  <p className="text-text-primary leading-relaxed mb-5">
-                    {event.description}
-                  </p>
+                    <p className="mt-2 text-sm text-text-primary leading-relaxed mb-5">
+                      {event.description}
+                    </p>
 
-                  {/* Event Details bullets */}
-                  <div className="mb-5">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-navy mb-2">
-                      Event Summary
-                    </h4>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {event.details.map((detail, dIdx) => (
-                        <li
-                          key={dIdx}
-                          className="flex items-start gap-2 text-sm text-text-secondary"
-                        >
-                          <span
-                            className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-navy/60"
-                            aria-hidden="true"
-                          />
-                          <span>{detail}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                    {/* Event Details bullets */}
+                    <div className="mb-5">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-navy mb-2">
+                        Event Summary
+                      </h4>
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {event.details.map((detail, dIdx) => (
+                          <li
+                            key={dIdx}
+                            className="flex items-start gap-2 text-xs font-medium text-text-secondary"
+                          >
+                            <CheckCircle2
+                              className="h-3.5 w-3.5 text-terracotta shrink-0 mt-0.5"
+                              aria-hidden="true"
+                            />
+                            <span className="leading-snug">{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
 
-                  {/* Date Note / Transparency disclosure */}
-                  <div className="flex items-start gap-2.5 rounded-lg border border-border/80 bg-white/90 p-3.5 text-xs text-text-secondary">
-                    <Info className="h-4 w-4 shrink-0 text-mustard mt-0.5" aria-hidden="true" />
-                    <div>
-                      <span className="font-semibold text-navy">Record Note: </span>
-                      <span className="italic">{event.dateNote}</span>
+                    {/* Date Note / Transparency disclosure */}
+                    <div className="flex items-start gap-2.5 rounded-lg border border-border/80 bg-white/90 p-3.5 text-xs text-text-secondary">
+                      <Info className="h-4 w-4 shrink-0 text-mustard mt-0.5" aria-hidden="true" />
+                      <div>
+                        <span className="font-semibold text-navy">Record Note: </span>
+                        <span className="italic">{event.dateNote}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </Section>
@@ -509,7 +532,7 @@ export default function ImpactPage() {
                       <button
                         type="button"
                         onClick={() => openLightbox(filteredImages, idx)}
-                        className="font-semibold text-terracotta hover:underline inline-flex items-center gap-1"
+                        className="font-semibold text-terracotta hover:underline inline-flex items-center gap-1 focus-visible:outline-2 focus-visible:outline-terracotta rounded-xs"
                       >
                         <span>View</span>
                         <Maximize2 className="h-3 w-3" aria-hidden="true" />

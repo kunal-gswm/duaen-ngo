@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link
               to="/"
-              className="group inline-block text-white no-underline"
+              className="group inline-block text-white no-underline focus-visible:outline-2 focus-visible:outline-white rounded-2xl"
               aria-label="Duaen Foundation NGO — Home"
             >
               <div className="inline-flex rounded-2xl bg-white p-3 shadow-md transition-transform group-hover:scale-102">
@@ -54,7 +54,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-dusty-blue/80 transition-colors hover:text-white"
+                    className="text-sm text-dusty-blue/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-white rounded"
                   >
                     {link.label}
                   </Link>
@@ -72,7 +72,7 @@ export default function Footer() {
               <li>
                 <a
                   href={`mailto:${ORG.email}`}
-                  className="inline-flex items-center gap-2 text-sm text-dusty-blue/80 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-2 text-sm text-dusty-blue/80 transition-colors hover:text-white break-all focus-visible:outline-2 focus-visible:outline-white rounded"
                 >
                   <Mail className="h-4 w-4 shrink-0" aria-hidden="true" />
                   {ORG.email}
@@ -83,23 +83,11 @@ export default function Footer() {
                   href={ORG.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-dusty-blue/80 transition-colors hover:text-white"
+                  className="inline-flex items-center gap-2 text-sm text-dusty-blue/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-white rounded"
                 >
                   <Instagram className="h-4 w-4 shrink-0" aria-hidden="true" />
                   Instagram
                   <ExternalLink className="h-3 w-3" aria-hidden="true" />
-                  <span className="sr-only">(opens in a new tab)</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href={ORG.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-dusty-blue/80 transition-colors hover:text-white"
-                >
-                  <ExternalLink className="h-4 w-4 shrink-0" aria-hidden="true" />
-                  {ORG.website.replace('https://', '')}
                   <span className="sr-only">(opens in a new tab)</span>
                 </a>
               </li>
@@ -116,7 +104,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-sm text-dusty-blue/80 transition-colors hover:text-white"
+                    className="text-sm text-dusty-blue/80 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-white rounded"
                   >
                     {link.label}
                   </Link>

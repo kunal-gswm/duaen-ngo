@@ -98,7 +98,7 @@ export default function Lightbox({
               ref={closeButtonRef}
               type="button"
               onClick={onClose}
-              className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-terracotta hover:text-white transition-colors focus-visible:outline-3 focus-visible:outline-terracotta"
+              className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-terracotta hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               aria-label="Close image preview (Escape)"
             >
               <X className="h-5 w-5" aria-hidden="true" />
@@ -121,7 +121,7 @@ export default function Lightbox({
               <button
                 type="button"
                 onClick={handlePrev}
-                className="absolute left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-navy/80 border border-white/20 text-white hover:bg-terracotta transition-colors shadow-lg focus-visible:outline-3 focus-visible:outline-terracotta"
+                className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-navy/80 border border-white/20 text-white hover:bg-terracotta transition-colors shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 aria-label="Previous image (Left arrow key)"
               >
                 <ChevronLeft className="h-6 w-6" aria-hidden="true" />
@@ -130,7 +130,7 @@ export default function Lightbox({
               <button
                 type="button"
                 onClick={handleNext}
-                className="absolute right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-navy/80 border border-white/20 text-white hover:bg-terracotta transition-colors shadow-lg focus-visible:outline-3 focus-visible:outline-terracotta"
+                className="absolute right-2 sm:right-3 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full bg-navy/80 border border-white/20 text-white hover:bg-terracotta transition-colors shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 aria-label="Next image (Right arrow key)"
               >
                 <ChevronRight className="h-6 w-6" aria-hidden="true" />

@@ -13,7 +13,6 @@ import {
   Calendar,
   MapPin,
   Mail,
-  Globe,
   ExternalLink,
   ArrowRight,
   ShieldCheck,
@@ -1003,29 +1002,35 @@ export default function HomePage() {
 
         <div className="mx-auto max-w-4xl">
           {/* Editorial Timeline Track */}
-          <div className="relative pl-6 sm:pl-8 space-y-10 border-l-2 border-border">
+          <div className="relative pl-10 sm:pl-14 space-y-8 sm:space-y-10">
+            {/* Continuous vertical timeline line */}
+            <div
+              className="absolute top-6 bottom-6 left-4 sm:left-5 w-0.5 bg-border/80 -translate-x-1/2"
+              aria-hidden="true"
+            />
+
             {/* Event 1: Medical Camp with Yashoda Hospital */}
             <div className="relative group">
               {/* Timeline Pin */}
               <div
-                className="absolute -left-[31px] sm:-left-[39px] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-navy text-white ring-4 ring-cream"
+                className="absolute left-4 sm:left-5 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-navy text-white ring-4 ring-cream shadow-xs"
                 aria-hidden="true"
               >
                 <Stethoscope className="h-4 w-4" />
               </div>
 
-              <div className="rounded-2xl border border-border bg-white p-6 sm:p-8 transition-shadow hover:shadow-md">
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-navy">
-                    <Calendar className="h-3 w-3" aria-hidden="true" />
-                    22 February (Year unrecorded in source records)
-                  </span>
-                  <span className="text-xs font-medium text-text-secondary">
+              <div className="rounded-2xl border border-border bg-white p-5 sm:p-7 transition-shadow hover:shadow-md">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                     Institutional Collaboration
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/70 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
+                    <Calendar className="h-3.5 w-3.5 text-terracotta shrink-0" aria-hidden="true" />
+                    <span className="break-words">22 February (Year unrecorded in source records)</span>
                   </span>
                 </div>
 
-                <h3 className="font-heading text-xl font-bold text-navy">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-navy">
                   {HEALTHCARE_EVENTS[0].title}
                 </h3>
 
@@ -1035,17 +1040,17 @@ export default function HomePage() {
                   100 attendees from underprivileged families.
                 </p>
 
-                <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-border pt-4">
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-2.5 border-t border-border pt-4">
                   {HEALTHCARE_EVENTS[0].details.map((detail, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-2 text-xs font-medium text-text-primary"
+                      className="flex items-start gap-2 text-xs font-medium text-text-primary"
                     >
                       <CheckCircle2
-                        className="h-3.5 w-3.5 text-terracotta shrink-0"
+                        className="h-3.5 w-3.5 text-terracotta shrink-0 mt-0.5"
                         aria-hidden="true"
                       />
-                      <span>{detail}</span>
+                      <span className="leading-snug">{detail}</span>
                     </div>
                   ))}
                 </div>
@@ -1060,24 +1065,24 @@ export default function HomePage() {
             <div className="relative group">
               {/* Timeline Pin */}
               <div
-                className="absolute -left-[31px] sm:-left-[39px] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-terracotta text-white ring-4 ring-cream"
+                className="absolute left-4 sm:left-5 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-terracotta text-white ring-4 ring-cream shadow-xs"
                 aria-hidden="true"
               >
                 <Heart className="h-4 w-4" />
               </div>
 
-              <div className="rounded-2xl border border-border bg-white p-6 sm:p-8 transition-shadow hover:shadow-md">
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-terracotta">
-                    <Clock className="h-3 w-3" aria-hidden="true" />
-                    Specialist-Led Student Workshop
-                  </span>
-                  <span className="text-xs font-medium text-text-secondary">
+              <div className="rounded-2xl border border-border bg-white p-5 sm:p-7 transition-shadow hover:shadow-md">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                     Life Safety Education
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/70 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
+                    <Clock className="h-3.5 w-3.5 text-terracotta shrink-0" aria-hidden="true" />
+                    <span className="break-words">Specialist-Led Student Workshop</span>
                   </span>
                 </div>
 
-                <h3 className="font-heading text-xl font-bold text-navy">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-navy">
                   {HEALTHCARE_EVENTS[1].title}
                 </h3>
 
@@ -1087,17 +1092,17 @@ export default function HomePage() {
                   emergencies, administering basic first-aid, and basic CPR techniques.
                 </p>
 
-                <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-border pt-4">
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-2.5 border-t border-border pt-4">
                   {HEALTHCARE_EVENTS[1].details.map((detail, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-2 text-xs font-medium text-text-primary"
+                      className="flex items-start gap-2 text-xs font-medium text-text-primary"
                     >
                       <CheckCircle2
-                        className="h-3.5 w-3.5 text-terracotta shrink-0"
+                        className="h-3.5 w-3.5 text-terracotta shrink-0 mt-0.5"
                         aria-hidden="true"
                       />
-                      <span>{detail}</span>
+                      <span className="leading-snug">{detail}</span>
                     </div>
                   ))}
                 </div>
@@ -1112,24 +1117,24 @@ export default function HomePage() {
             <div className="relative group">
               {/* Timeline Pin */}
               <div
-                className="absolute -left-[31px] sm:-left-[39px] top-1 flex h-8 w-8 items-center justify-center rounded-full bg-mustard text-navy ring-4 ring-cream"
+                className="absolute left-4 sm:left-5 top-5 sm:top-6 -translate-x-1/2 flex h-8 w-8 items-center justify-center rounded-full bg-mustard text-navy ring-4 ring-cream shadow-xs"
                 aria-hidden="true"
               >
                 <ShieldCheck className="h-4 w-4" />
               </div>
 
-              <div className="rounded-2xl border border-border bg-white p-6 sm:p-8 transition-shadow hover:shadow-md">
-                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-navy">
-                    <Calendar className="h-3 w-3" aria-hidden="true" />
-                    12 October 2026 (Date subject to confirmation)
-                  </span>
-                  <span className="text-xs font-medium text-text-secondary">
+              <div className="rounded-2xl border border-border bg-white p-5 sm:p-7 transition-shadow hover:shadow-md">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                  <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                     University Volunteer Collaboration
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 rounded-md bg-cream/70 px-2.5 py-1 text-xs font-medium text-navy border border-border/60 self-start sm:self-auto max-w-full">
+                    <Calendar className="h-3.5 w-3.5 text-terracotta shrink-0" aria-hidden="true" />
+                    <span className="break-words">12 October 2026 (Date subject to confirmation)</span>
                   </span>
                 </div>
 
-                <h3 className="font-heading text-xl font-bold text-navy">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-navy">
                   {HEALTHCARE_EVENTS[2].title}
                 </h3>
 
@@ -1139,17 +1144,17 @@ export default function HomePage() {
                   evacuation measures, and emergency response for the school community.
                 </p>
 
-                <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3 border-t border-border pt-4">
+                <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-2.5 border-t border-border pt-4">
                   {HEALTHCARE_EVENTS[2].details.map((detail, idx) => (
                     <div
                       key={idx}
-                      className="flex items-center gap-2 text-xs font-medium text-text-primary"
+                      className="flex items-start gap-2 text-xs font-medium text-text-primary"
                     >
                       <CheckCircle2
-                        className="h-3.5 w-3.5 text-terracotta shrink-0"
+                        className="h-3.5 w-3.5 text-terracotta shrink-0 mt-0.5"
                         aria-hidden="true"
                       />
-                      <span>{detail}</span>
+                      <span className="leading-snug">{detail}</span>
                     </div>
                   ))}
                 </div>
@@ -1619,28 +1624,6 @@ export default function HomePage() {
                     <p className="text-xs text-text-secondary mt-0.5">
                       For general information, volunteering, and program partnerships
                     </p>
-                  </div>
-                </div>
-
-                {/* Website */}
-                <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy/10 text-navy">
-                    <Globe className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-text-secondary block">
-                      Official Website
-                    </span>
-                    <a
-                      href={ORG.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-heading text-base font-semibold text-navy hover:text-terracotta transition-colors inline-flex items-center gap-1.5 mt-0.5 break-all"
-                    >
-                      {ORG.website.replace('https://', '')}
-                      <ExternalLink className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
-                      <span className="sr-only">(opens in a new tab)</span>
-                    </a>
                   </div>
                 </div>
 

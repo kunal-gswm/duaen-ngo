@@ -347,7 +347,7 @@ export default function VolunteerPage() {
                   internships, please write to us at{' '}
                   <a
                     href={`mailto:${ORG.email}`}
-                    className="font-semibold text-terracotta hover:underline"
+                    className="font-semibold text-terracotta hover:underline break-all"
                   >
                     {ORG.email}
                   </a>
@@ -658,7 +658,7 @@ export default function VolunteerPage() {
                 career-related enquiries, please contact us at{' '}
                 <a
                   href={`mailto:${ORG.email}`}
-                  className="font-semibold text-terracotta hover:underline"
+                  className="font-semibold text-terracotta hover:underline break-all"
                 >
                   {ORG.email}
                 </a>

@@ -107,7 +107,7 @@ export default function RegistrationsSection({
             <span className="text-xs text-text-secondary">For institutional verification enquiries:</span>
             <a
               href={`mailto:${ORG.email}?subject=Registration%20Verification%20Enquiry`}
-              className="inline-flex items-center gap-1.5 text-xs font-semibold text-terracotta hover:underline focus-visible:outline-terracotta"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold text-terracotta hover:underline focus-visible:outline-terracotta break-all"
             >
               <Mail className="h-3.5 w-3.5" aria-hidden="true" />
               <span>{ORG.email}</span>

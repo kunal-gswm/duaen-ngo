@@ -295,10 +295,10 @@ export default function DonatePage() {
                 <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
                   <a
                     href={`mailto:${ORG.email}?subject=Official%20Donation%20Information%20Enquiry`}
-                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-terracotta px-6 py-3 text-base font-semibold text-white shadow-xs transition-colors hover:bg-terracotta-light focus:outline-none focus:ring-2 focus:ring-terracotta"
+                    className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-md bg-terracotta px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base font-semibold text-white shadow-xs transition-colors hover:bg-terracotta-light focus:outline-none focus:ring-2 focus:ring-terracotta text-center"
                   >
-                    <Mail className="h-5 w-5" aria-hidden="true" />
-                    <span>Contact via {ORG.email}</span>
+                    <Mail className="h-5 w-5 shrink-0" aria-hidden="true" />
+                    <span className="break-all">Contact via {ORG.email}</span>
                   </a>
 
                   <ButtonLink

@@ -639,7 +639,7 @@ export default function AboutPage() {
               </ButtonLink>
               <a
                 href={`mailto:${ORG.email}`}
-                className="inline-flex items-center gap-2 text-sm font-semibold text-terracotta hover:underline"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-terracotta hover:underline break-all"
               >
                 <Mail className="h-4 w-4" aria-hidden="true" />
                 <span>{ORG.email}</span>
@@ -674,7 +674,7 @@ export default function AboutPage() {
               </span>
               <a
                 href={`mailto:${ORG.email}`}
-                className="font-medium text-white hover:text-mustard transition-colors text-sm mt-1 inline-block"
+                className="font-medium text-white hover:text-mustard transition-colors text-sm mt-1 inline-block break-all"
               >
                 {ORG.email}
               </a>

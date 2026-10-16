@@ -35,11 +35,11 @@ export default function Header() {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-3 text-white no-underline"
+            className="flex items-center gap-3 text-white no-underline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 rounded-lg"
             aria-label="Duaen Foundation NGO — Home"
             onClick={closeMobileMenu}
           >
-            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white p-1 shadow-xs transition-transform group-hover:scale-105 sm:h-12 sm:w-12">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white p-1 shadow-xs transition-transform hover:scale-105 sm:h-12 sm:w-12">
               <img
                 src="/logo-mark.png"
                 alt="Duaen Foundation NGO Emblem"
@@ -69,7 +69,7 @@ export default function Header() {
                 to={link.href}
                 end={link.href === '/'}
                 className={({ isActive }) =>
-                  `rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                  `rounded-md px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-white ${
                     isActive
                       ? 'bg-white/15 text-white'
                       : 'text-dusty-blue hover:bg-white/10 hover:text-white'
@@ -81,7 +81,7 @@ export default function Header() {
             ))}
             <Link
               to="/donate"
-              className={`ml-3 inline-flex items-center rounded-md px-5 py-2.5 text-sm font-semibold transition-colors ${
+              className={`ml-3 inline-flex items-center rounded-md px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 ${
                 location.pathname === '/donate'
                   ? 'bg-terracotta-light text-white'
                   : 'bg-terracotta text-white hover:bg-terracotta-light'
@@ -95,7 +95,7 @@ export default function Header() {
           <div className="flex items-center gap-3 lg:hidden">
             <Link
               to="/donate"
-              className="inline-flex items-center rounded-md bg-terracotta px-4 py-2 text-sm font-semibold text-white hover:bg-terracotta-light"
+              className="inline-flex items-center rounded-md bg-terracotta px-4 py-2 text-sm font-semibold text-white hover:bg-terracotta-light focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
               onClick={closeMobileMenu}
             >
               Donate
@@ -103,7 +103,7 @@ export default function Header() {
             <button
               type="button"
               onClick={toggleMobileMenu}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-md text-dusty-blue hover:bg-white/10 hover:text-white"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-md text-dusty-blue hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-white"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-nav"
               aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
@@ -133,7 +133,7 @@ export default function Header() {
                 end={link.href === '/'}
                 onClick={closeMobileMenu}
                 className={({ isActive }) =>
-                  `block rounded-md px-4 py-3 text-base font-medium transition-colors ${
+                  `block rounded-md px-4 py-3 text-base font-medium transition-colors focus-visible:outline-2 focus-visible:outline-white ${
                     isActive
                       ? 'bg-white/15 text-white'
                       : 'text-dusty-blue hover:bg-white/10 hover:text-white'

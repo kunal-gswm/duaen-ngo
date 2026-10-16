@@ -123,13 +123,13 @@ export function ButtonLink({
 }: ButtonLinkProps) {
   const variants: Record<string, string> = {
     primary:
-      'bg-terracotta text-white hover:bg-terracotta-light',
+      'bg-terracotta text-white hover:bg-terracotta-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-terracotta',
     secondary:
-      'bg-navy text-white hover:bg-navy-light',
+      'bg-navy text-white hover:bg-navy-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy',
     outline:
-      'border-2 border-navy text-navy hover:bg-navy hover:text-white',
+      'border-2 border-navy text-navy hover:bg-navy hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy',
     'outline-light':
-      'border-2 border-white text-white hover:bg-white hover:text-navy',
+      'border-2 border-white text-white hover:bg-white hover:text-navy focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white',
   }
 
   const classes = `inline-flex items-center justify-center rounded-md px-6 py-3 text-sm font-semibold transition-colors ${variants[variant]} ${className}`

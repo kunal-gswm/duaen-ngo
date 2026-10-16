@@ -4,7 +4,6 @@ import SeoHead from '../components/SeoHead'
 import { ORG } from '../data/content'
 import {
   Mail,
-  Globe,
   MapPin,
   AlertCircle,
   CheckCircle2,
@@ -170,7 +169,7 @@ export default function ContactPage() {
                 Contact Information
               </h3>
               <p className="mt-2 text-sm text-text-secondary leading-relaxed">
-                Reach out to us directly via email, visit our official website, or connect through our social channels.
+                Reach out to us directly via email or connect through our social channels.
               </p>
 
               <dl className="mt-6 space-y-6">
@@ -189,29 +188,6 @@ export default function ContactPage() {
                         className="font-medium text-navy hover:text-terracotta transition-colors break-all focus-visible:outline-terracotta"
                       >
                         {ORG.email}
-                      </a>
-                    </dd>
-                  </div>
-                </div>
-
-                {/* Website */}
-                <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-dusty-blue text-navy">
-                    <Globe className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-wider text-text-secondary">
-                      Website
-                    </dt>
-                    <dd className="mt-1">
-                      <a
-                        href={ORG.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 font-medium text-navy hover:text-terracotta transition-colors break-all focus-visible:outline-terracotta"
-                      >
-                        duaenfoundationngo.in
-                        <ExternalLink className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden="true" />
                       </a>
                     </dd>
                   </div>

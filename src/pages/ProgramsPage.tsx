@@ -60,7 +60,7 @@ export default function ProgramsPage() {
               <a
                 key={prog.id}
                 href={`#${prog.id}`}
-                className="whitespace-nowrap rounded-full bg-cream px-3.5 py-1 text-xs font-medium text-navy hover:bg-terracotta hover:text-white transition-colors"
+                className="whitespace-nowrap rounded-full bg-cream px-3.5 py-1 text-xs font-medium text-navy hover:bg-terracotta hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-terracotta"
               >
                 {prog.shortTitle || prog.title}
               </a>
