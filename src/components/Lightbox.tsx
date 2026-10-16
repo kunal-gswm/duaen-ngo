@@ -84,12 +84,7 @@ export default function Lightbox({
       >
         {/* Header Bar */}
         <div className="flex items-center justify-between border-b border-white/15 px-5 py-3.5 bg-navy-dark">
-          <div className="flex items-center gap-3 truncate">
-            {currentImage.category && (
-              <span className="rounded-full bg-terracotta px-2.5 py-0.5 text-xs font-semibold text-white uppercase tracking-wider">
-                {currentImage.category}
-              </span>
-            )}
+          <div className="truncate">
             <h3 className="font-heading text-sm sm:text-base font-bold text-white truncate">
               {currentImage.title}
             </h3>

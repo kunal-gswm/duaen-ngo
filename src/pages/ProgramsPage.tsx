@@ -491,18 +491,13 @@ export default function ProgramsPage() {
 
             <div className="lg:col-span-5">
               <div className="group relative overflow-hidden rounded-2xl border border-border bg-white shadow-xs">
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-navy/5">
+                <div className="relative aspect-video w-full overflow-hidden bg-navy/5">
                   <img
                     src="/images/events/cloth-distribution/cloth-distribution-overview.jpg"
                     alt="Duaen Foundation NGO team distributing seasonal clothing and care packages in Ghaziabad"
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-3 left-3">
-                    <span className="rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
-                      Ghaziabad Field Activity
-                    </span>
-                  </div>
                 </div>
                 <div className="p-4 bg-cream/30 border-t border-border/60 flex items-center justify-between text-xs">
                   <span className="font-semibold text-navy">Clothing &amp; Care Packages Drive</span>

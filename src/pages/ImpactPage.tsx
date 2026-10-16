@@ -18,7 +18,6 @@ import {
   CheckCircle2,
   Maximize2,
   Eye,
-  ShieldCheck,
 } from 'lucide-react'
 import { PageHero, Section, SectionHeading, ButtonLink } from '../components/ui'
 import SeoHead from '../components/SeoHead'
@@ -254,10 +253,9 @@ export default function ImpactPage() {
         <div className="space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-border pb-6">
             <div>
-              <div className="inline-flex items-center gap-2 rounded-full bg-cream px-3.5 py-1 text-xs font-semibold text-terracotta mb-3">
-                <ShieldCheck className="h-4 w-4" aria-hidden="true" />
-                <span>Verified Field Activity • {COMMUNITY_EVENT_CAMPAIGN.date}</span>
-              </div>
+              <p className="text-xs font-bold uppercase tracking-wider text-terracotta mb-2">
+                Documented Field Activity • {COMMUNITY_EVENT_CAMPAIGN.date}
+              </p>
               <h2 className="font-heading text-2xl font-bold text-navy sm:text-3xl lg:text-4xl">
                 {COMMUNITY_EVENT_CAMPAIGN.title}
               </h2>
@@ -308,11 +306,6 @@ export default function ImpactPage() {
                     <span className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-xs font-bold text-navy shadow-md">
                       <Eye className="h-3.5 w-3.5 text-terracotta" aria-hidden="true" />
                       <span>View Full Size</span>
-                    </span>
-                  </div>
-                  <div className="absolute top-2.5 left-2.5">
-                    <span className="rounded-md bg-navy/85 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-xs">
-                      {img.categoryLabel}
                     </span>
                   </div>
                 </button>
@@ -455,7 +448,7 @@ export default function ImpactPage() {
                   <button
                     type="button"
                     onClick={() => openLightbox(filteredImages, idx)}
-                    className="relative aspect-[4/3] w-full overflow-hidden bg-navy/5 text-left cursor-pointer focus-visible:outline-3 focus-visible:outline-terracotta"
+                    className="relative aspect-video w-full overflow-hidden bg-navy/5 text-left cursor-pointer focus-visible:outline-3 focus-visible:outline-terracotta"
                     aria-label={`Enlarge photo: ${image.title || image.alt}`}
                   >
                     <img
@@ -470,17 +463,11 @@ export default function ImpactPage() {
                         <span>Enlarge Photo</span>
                       </span>
                     </div>
-                    <div className="absolute top-3 left-3">
-                      <span className="inline-flex items-center gap-1.5 rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
-                        <span className="h-1.5 w-1.5 rounded-full bg-mustard" aria-hidden="true" />
-                        {image.categoryLabel}
-                      </span>
-                    </div>
                   </button>
                 ) : (
                   /* Visual placeholder box with CSS gradient for pending releases */
                   <div
-                    className="relative aspect-[4/3] w-full bg-gradient-to-br from-cream-dark to-dusty-blue-dark flex flex-col items-center justify-center p-6 text-center select-none"
+                    className="relative aspect-video w-full bg-gradient-to-br from-cream-dark to-dusty-blue-dark flex flex-col items-center justify-center p-6 text-center select-none"
                     role="img"
                     aria-label={image.alt}
                   >
@@ -499,20 +486,10 @@ export default function ImpactPage() {
                 {/* Card Information */}
                 <div className="p-5 flex flex-col flex-1 justify-between">
                   <div>
-                    <div className="flex items-center justify-between gap-2 mb-2">
+                    <div className="mb-2">
                       <span className="text-xs font-bold uppercase tracking-wider text-terracotta">
                         {image.categoryLabel}
                       </span>
-                      {image.isAuthentic ? (
-                        <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-navy bg-cream px-2 py-0.5 rounded-md">
-                          <CheckCircle2 className="h-3 w-3 text-terracotta" aria-hidden="true" />
-                          Verified Event
-                        </span>
-                      ) : (
-                        <span className="text-[11px] text-text-secondary/70">
-                          ID: {image.id}
-                        </span>
-                      )}
                     </div>
 
                     <h3 className="font-heading text-base font-bold text-navy group-hover:text-terracotta transition-colors">

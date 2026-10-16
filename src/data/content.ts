@@ -421,7 +421,7 @@ export const COMMUNITY_EVENT_CAMPAIGN = {
       location: 'Ghaziabad, UP',
       category: 'community' as const,
       categoryLabel: 'Community Welfare',
-      aspectRatio: 'portrait' as const,
+      aspectRatio: 'landscape' as const,
       isAuthentic: true,
     },
     {
@@ -435,7 +435,7 @@ export const COMMUNITY_EVENT_CAMPAIGN = {
       location: 'Ghaziabad, UP',
       category: 'volunteer' as const,
       categoryLabel: 'Volunteering',
-      aspectRatio: 'portrait' as const,
+      aspectRatio: 'landscape' as const,
       isAuthentic: true,
     },
     {
@@ -449,7 +449,7 @@ export const COMMUNITY_EVENT_CAMPAIGN = {
       location: 'Ghaziabad, UP',
       category: 'community' as const,
       categoryLabel: 'Community Welfare',
-      aspectRatio: 'portrait' as const,
+      aspectRatio: 'landscape' as const,
       isAuthentic: true,
     },
     {
@@ -463,7 +463,7 @@ export const COMMUNITY_EVENT_CAMPAIGN = {
       location: 'Ghaziabad, UP',
       category: 'community' as const,
       categoryLabel: 'Community Welfare',
-      aspectRatio: 'portrait' as const,
+      aspectRatio: 'landscape' as const,
       isAuthentic: true,
     },
   ],

@@ -511,18 +511,13 @@ export default function HomePage() {
 
           {/* Card 4: Community Welfare & Essential Support (lg:col-span-4) */}
           <div className="lg:col-span-4 flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-white hover:border-navy/40 transition-all shadow-xs group">
-            <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy/5">
+            <div className="relative aspect-video w-full overflow-hidden bg-navy/5">
               <img
                 src="/images/events/cloth-distribution/volunteer-distribution-outreach.jpg"
                 alt="Duaen Foundation NGO representative distributing food and care packages to community children beside official banner"
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute top-2.5 left-2.5">
-                <span className="rounded-md bg-navy/85 px-2 py-0.5 text-[11px] font-semibold text-white backdrop-blur-xs">
-                  Documented Campaign
-                </span>
-              </div>
             </div>
             <div className="p-6 sm:p-7 flex flex-col justify-between flex-1">
               <div>
@@ -1371,24 +1366,13 @@ export default function HomePage() {
 
           {/* Gallery Item 4: Real Community Welfare Photo */}
           <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-white shadow-xs hover:shadow-md transition-all">
-            <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy/5">
+            <div className="relative aspect-video w-full overflow-hidden bg-navy/5">
               <img
                 src="/images/events/cloth-distribution/cloth-distribution-overview.jpg"
                 alt="Duaen Foundation NGO team and community members at the cloth distribution drive in Ghaziabad"
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute top-3 left-3">
-                <span className="rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
-                  Community Welfare
-                </span>
-              </div>
-              <div className="absolute top-3 right-3">
-                <span className="inline-flex items-center gap-1 rounded-md bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-navy shadow-xs">
-                  <CheckCircle2 className="h-3 w-3 text-terracotta" aria-hidden="true" />
-                  Verified
-                </span>
-              </div>
             </div>
             <div className="p-6 flex flex-col flex-1 justify-between">
               <div>
@@ -1414,24 +1398,13 @@ export default function HomePage() {
 
           {/* Gallery Item 5: Real Volunteer Outreach Photo */}
           <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-white shadow-xs hover:shadow-md transition-all">
-            <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy/5">
+            <div className="relative aspect-video w-full overflow-hidden bg-navy/5">
               <img
                 src="/images/events/cloth-distribution/women-volunteers-outreach.jpg"
                 alt="Women volunteers from Duaen Foundation NGO coordinating care packages with community members"
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute top-3 left-3">
-                <span className="rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
-                  Volunteer Outreach
-                </span>
-              </div>
-              <div className="absolute top-3 right-3">
-                <span className="inline-flex items-center gap-1 rounded-md bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-navy shadow-xs">
-                  <CheckCircle2 className="h-3 w-3 text-terracotta" aria-hidden="true" />
-                  Verified
-                </span>
-              </div>
             </div>
             <div className="p-6 flex flex-col flex-1 justify-between">
               <div>
@@ -1457,24 +1430,13 @@ export default function HomePage() {
 
           {/* Gallery Item 6: Real Youth Welfare Photo */}
           <div className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-white shadow-xs hover:shadow-md transition-all">
-            <div className="relative aspect-[16/10] w-full overflow-hidden bg-navy/5">
+            <div className="relative aspect-video w-full overflow-hidden bg-navy/5">
               <img
                 src="/images/events/cloth-distribution/community-children-lineup.jpg"
                 alt="Community children gathered during Duaen Foundation welfare and clothing distribution drive"
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute top-3 left-3">
-                <span className="rounded-md bg-navy/90 px-2.5 py-1 text-xs font-semibold text-white backdrop-blur-xs">
-                  Community Welfare
-                </span>
-              </div>
-              <div className="absolute top-3 right-3">
-                <span className="inline-flex items-center gap-1 rounded-md bg-white/95 px-2 py-0.5 text-[11px] font-semibold text-navy shadow-xs">
-                  <CheckCircle2 className="h-3 w-3 text-terracotta" aria-hidden="true" />
-                  Verified
-                </span>
-              </div>
             </div>
             <div className="p-6 flex flex-col flex-1 justify-between">
               <div>
